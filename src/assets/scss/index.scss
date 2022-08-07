@@ -1,0 +1,13 @@
+// Global
+@import './global/variables';
+@import './global/mixins';
+@import './global/reset';
+@import './global/typography';
+@import './global/utilities';
+
+// Components
+@import './components/swiper';
+
+// Page -> The Magic Slab
+@import './layouts/header';
+@import './layouts/footer';

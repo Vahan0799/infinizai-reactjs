@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const MagicSlab = () => {
+const Mirage = () => {
     return (
         <main>
             <div className="page-wrapper">
@@ -12,4 +12,4 @@ const MagicSlab = () => {
     )
 }
 
-export default MagicSlab
+export default Mirage

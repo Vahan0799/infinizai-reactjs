@@ -1,12 +1,12 @@
 import {Routes, Route} from 'react-router-dom'
 
-import MagicSlab from '../pages/magic-slab'
+import Mirage from '../pages/mirage'
 
 const Routing = () => {
     return (
         <>
             <Routes>
-                <Route path='/' element={<MagicSlab/>} exact/>
+                <Route path='/' element={<Mirage/>} exact/>
             </Routes>
         </>
     )

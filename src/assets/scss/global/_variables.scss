@@ -12,16 +12,14 @@ $white: #fff !default;
 $black: #000 !default;
 
 // Main Colors
-$blue-600: rgb(18, 41, 52) !default;
-$red-500: rgb(242, 72, 65) !default;
-$white-200: #f9f9f9 !default;
+$gray-100: #AAAAAB 	!default;
+$gray-200: #919299 	!default;
+$blue-300: #56597A 	!default;
+$pink-300: #F78BB6 	!default;
 
-// Gray
-$gray-800: #2C2D32 !default;
-
-$primary: $blue-600;
-$secondary: $red-500;
-$tertiary: $white-200;
+$primary: $blue-300;
+$secondary: $gray-200;
+$tertiary: $pink-300;
 
 $colors: (
 	'primary': $primary,
@@ -33,11 +31,8 @@ $colors: (
 
 $bodyText: $black;
 
-$border-primary: 1px solid $primary;
-$outline-primary: 1px solid $primary;
-
-$font-family-primary: 'Titillium Web', sans-serif !default;
-$font-family-secondary: 'Inter', sans-serif !default;
+$font-family-primary: 'Circular Std', sans-serif !default;
+$font-family-secondary: 'Proxima Nova', sans-serif !default;
 
 $body-font: $font-family-primary;
 

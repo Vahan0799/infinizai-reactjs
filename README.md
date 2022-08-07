@@ -1,4 +1,4 @@
-# Getting Started with The Magic Slab App
+# Getting Started with Mirage App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -12,14 +12,13 @@ $white: #fff !default;
 $black: #000 !default;
 
 // Main Colors
-$gray-100: #AAAAAB 	!default;
+$gray-100: #5F5F5F 	!default;
 $gray-200: #919299 	!default;
-$blue-300: #56597A 	!default;
-$pink-300: #F78BB6 	!default;
+$gray-800: #313131 	!default;
 
-$primary: $blue-300;
+$primary: $gray-800;
 $secondary: $gray-200;
-$tertiary: $pink-300;
+$tertiary: $gray-100;
 
 $colors: (
 	'primary': $primary,
@@ -32,7 +31,6 @@ $colors: (
 $bodyText: $black;
 
 $font-family-primary: 'Circular Std', sans-serif !default;
-$font-family-secondary: 'Proxima Nova', sans-serif !default;
 
 $body-font: $font-family-primary;
 
@@ -41,14 +39,13 @@ $base-font-size-m: 16px;
 $base-line-height: normal;
 $base-letter-spacing: normal;
 
-$base-radius: 4px;
-
-$extra-large-font: 160px !default;
-$extra-large-font-m: 72px !default;
-$h1-font-size: 65px !default;
+$h1-font-size: 100px !default;
 $h1-font-size-m: 42px !default;
-$h2-font-size: 52px !default;
-$h2-font-size-m: 26px !default;
+$h2-font-size: 65px !default;
+$h2-font-size-m: 30px !default;
 $h3-font-size: 45px !default;
 $h3-font-size-m: 32px !default;
-$h4-font-size: 20px !default;
+$h4-font-size: 22px !default;
+$h4-font-size-m: 16px !default;
+$h5-font-size: 20px !default;
+$h5-font-size-m: 16px !default;

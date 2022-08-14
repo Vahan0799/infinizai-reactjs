@@ -1,6 +1,9 @@
 # Getting Started with Mirage App
+<p align="left">
+    <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150">
+</p>
 
-Click [here](https://www.figma.com/file/HOM1D9dbMm2BchjFYcKwzG/Mirage?node-id=1%3A2) for the App design sheet.
+Click [here](https://www.figma.com/file/aFv1wsisjjs8zFIDSSMgh0/%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81-%D0%B7%D0%B0%D0%BB?node-id=0%3A1) for the App design sheet.
 
 ## Available Scripts
 

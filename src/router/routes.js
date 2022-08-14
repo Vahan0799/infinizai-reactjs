@@ -1,12 +1,13 @@
+import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 
-import Mirage from '../pages/mirage'
+import Fitness from '../pages/fitness'
 
 const Routing = () => {
     return (
         <>
             <Routes>
-                <Route path='/' element={<Mirage/>} exact/>
+                <Route path='/' element={<Fitness/>} exact/>
             </Routes>
         </>
     )

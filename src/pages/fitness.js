@@ -1,7 +1,8 @@
+import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const Mirage = () => {
+const Fitness = () => {
     return (
         <main>
             <div className="page-wrapper">
@@ -12,4 +13,4 @@ const Mirage = () => {
     )
 }
 
-export default Mirage
+export default Fitness

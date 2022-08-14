@@ -1,13 +1,4 @@
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Regular.woff') format('woff'),
-    url('../fonts/ProximaNova-Regular.woff2') format('woff2');
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-}
-
-@font-face {
     font-family: 'Circular Std';
     src: url('../fonts/CircularStd-Medium.woff') format('woff'),
     url('../fonts/CircularStd-Medium.woff2') format('woff2');
@@ -18,9 +9,19 @@
 
 @font-face {
     font-family: 'Circular Std';
+    src: url('../fonts/CircularStd-Bold.woff') format('woff'),
+    url('../fonts/CircularStd-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+}
+
+
+@font-face {
+    font-family: 'Circular Std';
     src: url('../fonts/CircularStd-Black.woff') format('woff'),
     url('../fonts/CircularStd-Black.woff2') format('woff2');
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     font-display: block;
 }

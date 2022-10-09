@@ -12,13 +12,14 @@ $white: #fff !default;
 $black: #000 !default;
 
 // Main Colors
-$gray-100: #5F5F5F 	!default;
-$gray-200: #919299 	!default;
-$gray-800: #313131 	!default;
+$blue-500: 		#57B8FF 	!default;
+$yellow-400: 	#FDD04A 	!default;
+$gray-700:  	#3B3D46 	!default;
+$gray-800: 		#383D45 	!default;
 
-$primary: $gray-800;
-$secondary: $gray-200;
-$tertiary: $gray-100;
+$primary: $blue-500;
+$secondary: $yellow-400;
+$tertiary: $gray-800;
 
 $colors: (
 	'primary': $primary,
@@ -30,7 +31,7 @@ $colors: (
 
 $bodyText: $black;
 
-$font-family-primary: 'Circular Std', sans-serif !default;
+$font-family-primary: 'Orbitron', sans-serif !default;
 
 $body-font: $font-family-primary;
 

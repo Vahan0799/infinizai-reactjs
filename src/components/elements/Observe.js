@@ -23,7 +23,6 @@ const Observe = props => {
         )
 
         observer.observe(el.current)
-        // eslint-disable-next-line
     }, [])
 
     const classNames = () => {

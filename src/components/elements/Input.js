@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 
 const Input = props => {
     const {
-        label,
         className,
         labelClass,
         inputClass,
@@ -40,20 +39,18 @@ const Input = props => {
                 id={id}
                 type={type}
                 className={inputClass ? inputClass : ''}
-                placeholder={placeholder}
+                placeholder={' '}
                 name={name}
                 onChange={changeHandler}
                 autoComplete={autocomplete}
                 {...rest}
             />
-            {label && (
-                <label
-                    htmlFor={id}
-                    className={labelClass ? labelClass : ''}
-                >
-                    {label}
-                </label>
-            )}
+            <label
+                htmlFor={id}
+                className={labelClass ? labelClass : ''}
+            >
+                {placeholder}
+            </label>
         </div>
     )
 }

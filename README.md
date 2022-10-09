@@ -3,8 +3,6 @@
     <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150">
 </p>
 
-Click [here](https://www.figma.com/file/aFv1wsisjjs8zFIDSSMgh0/%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81-%D0%B7%D0%B0%D0%BB?node-id=0%3A1) for the App design sheet.
-
 ## Available Scripts
 
 In the project directory, you can run:

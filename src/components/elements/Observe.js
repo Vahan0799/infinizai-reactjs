@@ -1,9 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 
 const Observe = props => {
     const [intercepted, setIntercepted] = useState(false)
     const el = useRef(null)
     useEffect(() => {
+        observeSections()
+    }, [])
+
+    const observeSections = () => {
         const threshold = props.threshold || 0.01
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -23,7 +27,7 @@ const Observe = props => {
         )
 
         observer.observe(el.current)
-    }, [])
+    }
 
     const classNames = () => {
         return `work-spacing ${

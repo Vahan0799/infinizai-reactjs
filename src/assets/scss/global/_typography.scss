@@ -30,7 +30,7 @@ h6 {
 h1,
 .h1 {
     font-size: $h1-font-size-m;
-    font-weight: 900;
+    font-weight: 400;
 
     @include media-breakpoint-up(lg) {
 	font-size: $h1-font-size;

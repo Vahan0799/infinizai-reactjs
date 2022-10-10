@@ -4,7 +4,7 @@ $media-break-points: (
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1200px,
+	xl: 1280px,
 	xxl: 1440px,
 ) !default;
 
@@ -14,6 +14,9 @@ $black: #000 !default;
 // Main Colors
 $blue-500: 		#57B8FF 	!default;
 $yellow-400: 	#FDD04A 	!default;
+
+// gray
+$gray-300: 		#999999 	!default;
 $gray-700:  	#3B3D46 	!default;
 $gray-800: 		#383D45 	!default;
 
@@ -29,19 +32,19 @@ $colors: (
 	'black': $black,
 ) !default;
 
-$bodyText: $black;
+$bodyText: $white;
 
 $font-family-primary: 'Orbitron', sans-serif !default;
 
 $body-font: $font-family-primary;
 
 $base-font-size: 16px;
-$base-font-size-m: 16px;
+$base-font-size-m: 14px;
 $base-line-height: normal;
 $base-letter-spacing: normal;
 
-$h1-font-size: 100px !default;
-$h1-font-size-m: 42px !default;
+$h1-font-size: 72px !default;
+$h1-font-size-m: 36px !default;
 $h2-font-size: 65px !default;
 $h2-font-size-m: 30px !default;
 $h3-font-size: 45px !default;

@@ -68,7 +68,7 @@
     $max: breakpoint-max($upper, $breakpoints);
 
     @if $min !=null and $max !=null {
-        @media (min-width: $min) and (max-width: $max) {
+        @media (min-width: $min) and (max-width: $max - 0.2px) {
             @content;
         }
     }

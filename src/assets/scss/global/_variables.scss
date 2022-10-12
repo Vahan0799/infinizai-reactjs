@@ -24,14 +24,6 @@ $primary: $blue-500;
 $secondary: $yellow-400;
 $tertiary: $gray-800;
 
-$colors: (
-	'primary': $primary,
-	'secondary': $secondary,
-	'tertiary': $tertiary,
-	'white': $white,
-	'black': $black,
-) !default;
-
 $bodyText: $white;
 
 $font-family-primary: 'Orbitron', sans-serif !default;
@@ -45,8 +37,8 @@ $base-letter-spacing: normal;
 
 $h1-font-size: 72px !default;
 $h1-font-size-m: 36px !default;
-$h2-font-size: 65px !default;
-$h2-font-size-m: 30px !default;
+$h2-font-size: 50px !default;
+$h2-font-size-m: 20px !default;
 $h3-font-size: 45px !default;
 $h3-font-size-m: 32px !default;
 $h4-font-size: 22px !default;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Image = props => {
+const Image = React.forwardRef((props, ref) => {
     const {
         src,
         className,
@@ -12,11 +12,12 @@ const Image = props => {
     return (
         <>
             <img
+                ref={ref}
                 src={src} alt={alt} width={width} height={height} className={className}
                 loading={'lazy'}
             />
         </>
     )
-}
+})
 
 export default Image

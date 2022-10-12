@@ -43,7 +43,7 @@
                     width: 10px;
                     height: 10px;
                     background-color: $primary;
-                    border: 2px solid $secondary;
+                    border: 2px solid var(--color);
                     transition: .4s;
                 }
 
@@ -66,10 +66,10 @@
             }
 
             &:hover {
-                background-color: $secondary;
-                border-color: $secondary;
+                background-color: var(--color);
+                border-color: var(--color);
                 letter-spacing: 1.2px;
-                box-shadow: 0 0 35px $secondary;
+                box-shadow: 0 0 35px var(--color);
 
                 i {
                     &::before {
@@ -103,14 +103,14 @@
                 transform: translateX(-50%);
                 width: 30px;
                 height: 10px;
-                background-color: $primary;
+                background-color: var(--color);
                 border-radius: 10px;
                 transition: .5s;
                 transition-delay: 0s;
-                box-shadow: 0 0 5px $primary,
-                0 0 15px $primary,
-                0 0 30px $primary,
-                0 0 60px $primary;
+                box-shadow: 0 0 5px var(--color),
+                0 0 15px var(--color),
+                0 0 30px var(--color),
+                0 0 60px var(--color);
             }
 
             span {

@@ -51,7 +51,7 @@ const Hero = () => {
                         <h1>Unleash the Next <Underline color="yellow">Generation</Underline> of Gaming</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
                         <div className="hero__description--buttons">
-                            <LinkElem to="#." type="solid-secondary">Explore More</LinkElem>
+                            <LinkElem to="#." type="solid-secondary" color="#57B8FF">Explore More</LinkElem>
                             <LinkElem to="#." type="primary">View our team</LinkElem>
                         </div>
                     </div>
@@ -60,9 +60,9 @@ const Hero = () => {
                     <div className="hero__img"  ref={heroImage}>
                         <Image
                             src={HeroImage}
-                            width="660"
-                            height="518"
-                            alt="hero-png"
+                            width={'660'}
+                            height={'518'}
+                            alt={'hero-png'}
                         />
                     </div>
                 </div>

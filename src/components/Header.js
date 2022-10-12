@@ -77,12 +77,12 @@ const Header = () => {
                             <Button design="reset">
                                 <Image
                                     src={CartIcon}
-                                    width="53"
-                                    height="40"
-                                    alt="cart-icon"
+                                    width={'53'}
+                                    height={'40'}
+                                    alt={'cart-icon'}
                                 />
                             </Button>
-                            <Button design="solid-primary">
+                            <Button design="solid-primary" color="#FDD04A">
 								Contact Us
                             </Button>
                         </div>

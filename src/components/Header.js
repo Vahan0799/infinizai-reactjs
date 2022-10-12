@@ -11,27 +11,38 @@ import CartIcon from '../assets/svg/cart-icon.svg'
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
-    const [fillHeader, setFillHeader] = useState(false)
+    const [position, setPosition] = useState(window.scrollY)
+    const [headerSticky, setHeaderSticky] = useState(false)
+    const [atTop, setAtTop] = useState(true)
 
     const toggleNav = () => {
         setNavOpen(!navOpen)
     }
 
-    const fillHeaderElement = () => {
-        const header = document.querySelector('.header').clientHeight
-        window.scrollY > header ? setFillHeader(true) : setFillHeader(false)
+    const stickyHeader = () => {
+        let moving = window.scrollY
+
+        if (window.scrollY > 5 && !navOpen) {
+            setHeaderSticky(position > moving)
+            setPosition(moving)
+            setAtTop(false)
+
+        } else if (window.scrollY <= 5 && !navOpen) {
+            setAtTop(true)
+            setHeaderSticky(false)
+        }
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', fillHeaderElement)
+        window.addEventListener('scroll', stickyHeader)
 
         return () => {
-            window.removeEventListener('scroll', fillHeaderElement)
+            window.removeEventListener('scroll', stickyHeader)
         }
-    }, [fillHeader])
+    })
 
     return (
-        <header className={`header${fillHeader ? ' header__scroll' : ''}`}>
+        <header className={`header${headerSticky ? ' header__sticky' : ''}${atTop ? ' header__visible' : ''}`}>
             <div className={`header__inner${navOpen ? ' header__open' : ''}`}>
                 <div className="header__inner--main">
                     <LinkElem to="/">
@@ -71,7 +82,7 @@ const Header = () => {
                                     alt="cart-icon"
                                 />
                             </Button>
-                            <Button design="solid-secondary">
+                            <Button design="solid-primary">
 								Contact Us
                             </Button>
                         </div>

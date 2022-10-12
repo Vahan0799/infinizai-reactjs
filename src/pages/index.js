@@ -1,5 +1,6 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
+
+import DefaultLayout from '../layouts/Default'
 
 import Header from '../components/Header'
 import Hero from '../components/pages/home/Hero'
@@ -7,18 +8,11 @@ import Footer from '../components/Footer'
 
 const Index = () => {
     return (
-        <>
-            <Helmet>
-                <title>Infinizai | Home</title>
-            </Helmet>
-            <main>
-                <div className="page-wrapper">
-                    <Header/>
-                    <Hero/>
-                    <Footer/>
-                </div>
-            </main>
-        </>
+        <DefaultLayout title="Home">
+            <Header/>
+            <Hero/>
+            <Footer/>
+        </DefaultLayout>
     )
 }
 

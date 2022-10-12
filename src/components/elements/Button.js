@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = React.forwardRef((props, ref) => {
+const Button = props => {
     const {
         children,
         className,
@@ -12,14 +12,27 @@ const Button = React.forwardRef((props, ref) => {
         return `btn btn-${design} ${className || ''}`
     }
 
-    return(
+    return (
         <button className={classNames()}
-            ref={ref}
             {...rest}
         >
-            {children}
+            {design === 'solid-primary' || design === 'solid-secondary' ? (
+                <>
+                    <span>{children}</span>
+                    {design === 'solid-primary' &&
+                        <>
+                            <i></i>
+                            <i></i>
+                        </>
+                    }
+                </>
+            ) : (
+                <>
+                    {children}
+                </>
+            )}
         </button>
     )
-})
+}
 
 export default Button

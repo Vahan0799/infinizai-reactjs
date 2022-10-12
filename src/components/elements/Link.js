@@ -14,7 +14,13 @@ const LinkElem = props => {
 
     return (
         <Link className={classNames()} {...rest}>
-            {children}
+            {type === 'solid-secondary' ? (
+                <span>{children}</span>
+            ) : (
+                <>
+                    {children}
+                </>
+            )}
         </Link>
     )
 }

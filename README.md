@@ -1,4 +1,4 @@
-# Getting Started with Mirage App
+# Getting Started with Infinizai
 <p align="left">
     <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150">
 </p>

@@ -1,0 +1,17 @@
+.esports-section {
+    @extend %align-center;
+    margin-bottom: 15px;
+
+    img {
+        margin-right: 10px;
+    }
+
+    p {
+        color: $primary;
+        font-size: 16px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 14px;
+        }
+    }
+}

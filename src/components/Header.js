@@ -48,8 +48,8 @@ const Header = () => {
                     <LinkElem to="/">
                         <Image
                             src={Logo}
-                            width={'170'}
-                            height={'48'}
+                            width={170}
+                            height={48}
                             alt={'site-logo'}
                         />
                     </LinkElem>
@@ -77,8 +77,8 @@ const Header = () => {
                             <Button design="reset">
                                 <Image
                                     src={CartIcon}
-                                    width={'53'}
-                                    height={'40'}
+                                    width={53}
+                                    height={40}
                                     alt={'cart-icon'}
                                 />
                             </Button>

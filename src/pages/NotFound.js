@@ -35,8 +35,8 @@ const NotFound = () => {
                         <Image
                             ref={notFound}
                             src={NotFoundImage}
-                            width={'596'}
-                            height={'695'}
+                            width={596}
+                            height={695}
                             alt={'not-found'}
                             className="object-cover"
                         />

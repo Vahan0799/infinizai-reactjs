@@ -8,7 +8,6 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        bottom: -2px;
         left: 0;
         background-position: bottom;
         background-repeat: no-repeat;
@@ -23,12 +22,18 @@
     &-yellow::after {
         background-image: url('../../svg/yellow-line.svg');
         transform: scaleX(1);
+        bottom: -2px;
         opacity: 1;
     }
 
     &-blue::after {
         background-image: url('../../svg/blue-line.svg');
         transform: scaleX(1);
+        bottom: -20px;
         opacity: 1;
+
+        @include media-breakpoint-down(lg) {
+            bottom: -8px;
+        }
     }
 }

@@ -1,13 +1,13 @@
 import React, {useEffect, useRef} from 'react'
 import {gsap} from 'gsap/all'
 
-import Underline from '../../elements/Underline'
-import LinkElem from '../../elements/Link'
-import Image from '../../elements/Image'
+import Underline from '../../components/elements/Underline'
+import LinkElem from '../../components/elements/Link'
+import Image from '../../components/elements/Image'
 
-import Esports from '../../Esports'
+import Esports from '../../components/Esports'
 
-import HeroImage from '../../../assets/images/hero-img.png'
+import HeroImage from '../../assets/images/hero-img.png'
 
 const Hero = () => {
     const socialElements = useRef(null)
@@ -60,8 +60,8 @@ const Hero = () => {
                     <div className="hero__img"  ref={heroImage}>
                         <Image
                             src={HeroImage}
-                            width={'660'}
-                            height={'518'}
+                            width={660}
+                            height={518}
                             alt={'hero-png'}
                         />
                     </div>

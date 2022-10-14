@@ -1,3 +1,4 @@
+// Hero section (1)
 .hero {
     width: 100%;
 
@@ -143,7 +144,9 @@
     }
 }
 
+// Sponsors section (2)
 .sponsors {
+    $sponsor: #{&};
     padding: 50px 15px;
     background-color: $secondary;
 
@@ -183,6 +186,12 @@
         @include media-breakpoint-up(lg) {
             grid-template-columns: repeat(6, 14.96%);
             grid-gap: 2%;
+        }
+
+        &:hover {
+            #{$sponsor}__list--item:not(:hover) img {
+                opacity: .3;
+            }
         }
 
         &--item {
@@ -229,6 +238,92 @@
                     transform: scale(1.2);
                     transition-delay: 0s;
                 }
+            }
+        }
+    }
+}
+
+// Gaming Needs section (3)
+.gaming-needs {
+    width: 100%;
+    background-image: url('../../images/gaming-needs.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($black, 0.6);
+        z-index: -1;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 50px 15px;
+        background-image: url('../../images/gaming-needs-mobile.jpeg');
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & > p, & > h3 {
+            @include media-breakpoint-up(lg) {
+                max-width: 710px;
+            }
+        }
+
+        & > h3 {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-gap: 32px;
+        margin: 55px 0 0;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 1204px;
+            margin: 50px auto 0;
+        }
+
+        &--item {
+            display: flex;
+            align-items: baseline;
+            background-color: rgba($white, 0.15);
+            border-radius: 20px;
+            text-align: left;
+            border: 1px solid rgba($white, 0.15);
+            padding: 25px 15px;
+
+            @include media-breakpoint-up(lg) {
+                padding: 35px;
+            }
+
+            img {
+                margin-right: 25px;
+
+                @include media-breakpoint-down(md) {
+                    margin-right: 15px;
+                }
+            }
+
+            h3 {
+                margin-bottom: 15px;
             }
         }
     }

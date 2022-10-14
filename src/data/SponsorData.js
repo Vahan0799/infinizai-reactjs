@@ -7,27 +7,33 @@ import MuzicaLogo from '../assets/svg/muzica-logo.svg'
 const SponsorData = [
     {
         logo: IdeaaLogo,
-        alt: 'Idea'
+        alt: 'Idea',
+        origin: 'top'
     },
     {
         logo: AmaraLogo,
-        alt: 'Amara'
+        alt: 'Amara',
+        origin: 'bottom'
     },
     {
         logo: LightAILogo,
-        alt: 'LightAI'
+        alt: 'LightAI',
+        origin: 'top'
     },
     {
         logo: CircleLogo,
-        alt: 'Circle'
+        alt: 'Circle',
+        origin: 'bottom'
     },
     {
         logo: MuzicaLogo,
-        alt: 'Muzica'
+        alt: 'Muzica',
+        origin: 'top'
     },
     {
         logo: LightAILogo,
-        alt: 'LightAI'
+        alt: 'LightAI',
+        origin: 'bottom'
     }
 ]
 

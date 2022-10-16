@@ -1,13 +1,13 @@
 import React, {useEffect, useRef} from 'react'
 import {gsap} from 'gsap/all'
 
-import Underline from '../../components/elements/Underline'
-import LinkElem from '../../components/elements/Link'
-import Image from '../../components/elements/Image'
+import Underline from '../../../components/elements/Underline'
+import LinkElem from '../../../components/elements/Link'
+import Image from '../../../components/elements/Image'
 
-import Esports from '../../components/Esports'
+import Esports from '../../../components/Esports'
 
-import HeroImage from '../../assets/images/hero-img.png'
+import HeroImage from '../../../assets/images/hero-img.png'
 
 const Hero = () => {
     const socialElements = useRef(null)
@@ -51,7 +51,7 @@ const Hero = () => {
                         <h1>Unleash the Next <Underline color="yellow">Generation</Underline> of Gaming</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
                         <div className="hero__description--buttons">
-                            <LinkElem to="#." type="solid-secondary" color="#57B8FF">Explore More</LinkElem>
+                            <LinkElem to="#." type="solid-secondary" data-color="#57B8FF">Explore More</LinkElem>
                             <LinkElem to="#." type="primary">View our team</LinkElem>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 
 const Button = props => {
     const {
@@ -9,21 +9,9 @@ const Button = props => {
         ...rest
     } = props
 
-    const setButtonProperties = () => {
-        if (color) {
-            document.querySelectorAll('.btn').forEach((elem) => {
-                elem.setAttribute('style', `--color:${color}`)
-            })
-        }
-    }
-
     const classNames = () => {
-        return `btn btn-${design} ${className || ''}`
+        return `btn${design ? ` btn-${design}` : ''} ${className || ''}`
     }
-
-    useEffect(() => {
-        setButtonProperties()
-    },[])
 
     return (
         <button className={classNames()}

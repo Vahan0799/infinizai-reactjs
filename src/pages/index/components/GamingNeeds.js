@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Image from '../../components/elements/Image'
-import Esports from '../../components/Esports'
-import AnimateOnScroll from '../../components/AnimateOnScroll'
+import Image from '../../../components/elements/Image'
+import Esports from '../../../components/Esports'
+import AnimateOnScroll from '../../../components/AnimateOnScroll'
 
-import GamingNeedsData from '../../data/GamingNeedsData'
+import GamingNeedsData from '../../../data/GamingNeedsData'
 
-import needsIcon from '../../assets/svg/dot-icon.svg'
+import needsIcon from '../../../assets/svg/dot-icon.svg'
 
 const GamingNeeds = () => {
     return (

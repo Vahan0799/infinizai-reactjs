@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 
 const LinkElem = props => {
@@ -9,21 +9,9 @@ const LinkElem = props => {
         ...rest
     } = props
 
-    const setLinkProperties = () => {
-        if (color) {
-            document.querySelectorAll('.link').forEach((el) => {
-                el.setAttribute('style', `--color:${color}`)
-            })
-        }
-    }
-
     const classNames = () => {
         return `link${type ? ` link-${type}` : ''}`
     }
-
-    useEffect(() => {
-        setLinkProperties()
-    },[])
 
     return (
         <Link className={classNames()} {...rest}>

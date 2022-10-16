@@ -2,9 +2,10 @@ import React from 'react'
 
 import DefaultLayout from '../../layouts/Default'
 
-import Hero from './Hero'
-import Sponsors from './Sponsors'
-import GamingNeeds from './GamingNeeds'
+import Hero from './components/Hero'
+import Sponsors from './components/Sponsors'
+import GamingNeeds from './components/GamingNeeds'
+import CloudGaming from './components/CloudGaming'
 
 const Index = () => {
     return (
@@ -12,6 +13,7 @@ const Index = () => {
             <Hero/>
             <Sponsors/>
             <GamingNeeds/>
+            <CloudGaming/>
         </DefaultLayout>
     )
 }

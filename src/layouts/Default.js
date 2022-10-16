@@ -16,11 +16,11 @@ const DefaultLayout = props => {
                 <title>Infinizai | {title}</title>
             </Helmet>
             <main>
+                <Header/>
                 <div className="page-wrapper">
-                    <Header/>
                     {children}
-                    <Footer/>
                 </div>
+                <Footer/>
             </main>
         </>
     )

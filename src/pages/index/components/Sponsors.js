@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Underline from '../../components/elements/Underline'
-import Image from '../../components/elements/Image'
-import AnimateOnScroll from '../../components/AnimateOnScroll'
+import Underline from '../../../components/elements/Underline'
+import Image from '../../../components/elements/Image'
+import AnimateOnScroll from '../../../components/AnimateOnScroll'
 
-import SponsorData from '../../data/SponsorData'
+import SponsorData from '../../../data/SponsorData'
 
 const Sponsors = () => {
     return (

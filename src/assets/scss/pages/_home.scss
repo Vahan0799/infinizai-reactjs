@@ -330,7 +330,7 @@
     }
 }
 
-// Cloud Gaming section(4)
+// Cloud Gaming section (4)
 .cloud-gaming {
     background-color: $black;
 
@@ -462,5 +462,122 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+// Characters section (5)
+.characters {
+    background-color: $blue-800;
+
+    &__container {
+        display: flex;
+        padding: 45px 0 0;
+        overflow: hidden;
+
+        @include media-breakpoint-down(lg) {
+            padding: 50px 0 0;
+            flex-direction: column;
+        }
+    }
+
+    &__single,
+    &__description {
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+    }
+
+    &__single {
+        position: relative;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 50px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 25px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: circle-bounce 10.5s linear infinite;
+            border: 5px solid rgba($white, 0.2);
+
+            @include media-breakpoint-down(md) {
+                width: 250px;
+                height: 250px;
+            }
+
+            @include media-breakpoint-between(md, lg) {
+                width: 40vw;
+                height: 40vw;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        &::before {
+            top: 50%;
+            background-color: $secondary;
+            box-shadow: 0 0 5px $secondary,
+            0 0 60px $secondary;
+
+            @include media-breakpoint-down(lg) {
+                top: 38%;
+            }
+        }
+
+        &::after {
+            top: 70%;
+            background-color: $primary;
+            box-shadow: inset 0 10px 50px rgba($black, 0.5);
+
+            @include media-breakpoint-down(lg) {
+                top: 50%;
+            }
+        }
+
+        &--img {
+            display: flex;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        @include media-breakpoint-down(lg) {
+            padding: 0 25px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 560px;
+        }
+
+        h3 {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@keyframes circle-bounce {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
     }
 }

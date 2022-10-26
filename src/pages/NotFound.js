@@ -16,11 +16,11 @@ const NotFound = () => {
         gsap.fromTo(notFound?.current, {
             opacity: 0,
             translateX: '60%',
-            ease: 'Power2.EaseInOut'
+            ease: 'Power4.EaseInOut'
         }, {
             opacity: 1,
             translateX: 0
-        }).timeScale(0.4)
+        }).timeScale(0.5)
     }
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const NotFound = () => {
     },[])
 
     return (
-        <Empty title="NOT FOUND">
+        <Empty title="NOT FOUND" description="The page you are trying to reach does not exist.">
             <section className="not-found">
                 <div className="not-found__content">
                     <div className="not-found__image">

@@ -33,7 +33,7 @@ const CloudGaming = () => {
                     <LinkElem to="#." type="solid-secondary">Explore More</LinkElem>
                 </article>
                 <AnimateOnScroll className="cloud-gaming__media"
-                    AnimationOrigin="bottom"
+                    AnimationOrigin="top"
                     AnimationDistance={'80px'}
                     AnimationDelay={300}
                     AnimationEasing={'ease'}

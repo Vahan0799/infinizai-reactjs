@@ -10,7 +10,7 @@ const Video =  React.forwardRef((props, ref) => {
     } = props
 
     return (
-        <video {...rest} ref={ref}>
+        <video {...rest} playsInline ref={ref}>
             {fallBackSrc && fallBackType &&
 				<source src={fallBackSrc} type={`video/${fallBackType}`}/>
             }

@@ -1,17 +1,17 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
+import HeadMeta from '../components/HeadMeta'
 
 const Empty = props => {
     const {
         title,
+        description,
+        image,
         children
     } = props
 
     return (
         <>
-            <Helmet>
-                <title>Infinizai | {title}</title>
-            </Helmet>
+            <HeadMeta title={title} description={description} image={image}/>
             <main>
                 <div className="page-wrapper">
                     {children}

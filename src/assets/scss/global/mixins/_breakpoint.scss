@@ -9,8 +9,8 @@
     $breakpoint-names: map-keys($breakpoints)) {
     $n: index($breakpoint-names, $name);
     @return if($n !=null and $n < length($breakpoint-names),
-        nth($breakpoint-names, $n + 1),
-        null);
+            nth($breakpoint-names, $n + 1),
+            null);
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
@@ -36,9 +36,7 @@
         @media (min-width: $min) {
             @content;
         }
-    }
-
-    @else {
+    } @else {
         @content;
     }
 }
@@ -52,9 +50,7 @@
         @media (max-width: ($max - .02px)) {
             @content;
         }
-    }
-
-    @else {
+    } @else {
         @content;
     }
 }
@@ -71,15 +67,11 @@
         @media (min-width: $min) and (max-width: $max - 0.2px) {
             @content;
         }
-    }
-
-    @else if $max==null {
+    } @else if $max==null {
         @include media-breakpoint-up($lower, $breakpoints) {
             @content;
         }
-    }
-
-    @else if $min==null {
+    } @else if $min==null {
         @include media-breakpoint-down($upper, $breakpoints) {
             @content;
         }
@@ -97,15 +89,11 @@
         @media (min-width: $min) and (max-width: $max) {
             @content;
         }
-    }
-
-    @else if $max==null {
+    } @else if $max==null {
         @include media-breakpoint-up($name, $breakpoints) {
             @content;
         }
-    }
-
-    @else if $min==null {
+    } @else if $min==null {
         @include media-breakpoint-down($name, $breakpoints) {
             @content;
         }

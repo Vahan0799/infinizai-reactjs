@@ -24,7 +24,9 @@ const NotFound = () => {
     }
 
     useEffect(() => {
-        RevealImage()
+        if (typeof window !== 'undefined') {
+            RevealImage()
+        }
     },[])
 
     return (

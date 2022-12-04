@@ -10,13 +10,10 @@ const Image = React.forwardRef((props, ref) => {
     } = props
 
     return (
-        <>
-            <img
-                ref={ref}
-                src={src} alt={alt} width={width} height={height} className={className}
-                loading={'lazy'}
-            />
-        </>
+        <img
+            ref={ref}
+            src={src} alt={alt} width={width} height={height} className={className}
+        />
     )
 })
 

@@ -9,18 +9,6 @@ body {
     }
 }
 
-.page-wrapper {
-    @include media-breakpoint-up(lg) {
-        position: fixed;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        width: 100%;
-        //transition: transform ease-out .5s;
-    }
-}
-
 .container {
     @include media-breakpoint-up(lg) {
         margin: 0 auto;

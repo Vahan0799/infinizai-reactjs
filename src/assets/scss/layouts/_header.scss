@@ -49,8 +49,6 @@
             background-color: $tertiary;
 
             .nav {
-                opacity: 1;
-                visibility: visible;
                 pointer-events: auto;
                 height: calc(100vh - 50px);
 
@@ -87,8 +85,6 @@
         left: 0;
         overflow: auto;
         pointer-events: none;
-        opacity: 0;
-        visibility: hidden;
         transition: all .4s ease;
     }
 
@@ -101,7 +97,7 @@
     }
 
     &__list {
-       @extend %align-center;
+        @extend %align-center;
 
         @include media-breakpoint-down(lg) {
             flex-direction: column;

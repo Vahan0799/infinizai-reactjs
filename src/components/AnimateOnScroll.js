@@ -42,7 +42,7 @@ const AnimateOnScroll = props => {
     }
 
     useEffect(() => {
-        if (window !== undefined) {
+        if (typeof window !== 'undefined') {
             RevealAnimation()
         }
     }, [])

@@ -1,2 +1,46 @@
 @import 'node_modules/swiper/swiper';
 @import 'node_modules/swiper/modules/navigation/navigation';
+
+.swiper {
+    &-wrapper {
+        will-change: transform;
+    }
+
+    &-button {
+        &-prev,
+        &-next {
+            width: 43px;
+            height: 43px;
+            color: $white;
+            background-color: $primary;
+            transition: .5s ease;
+
+            &::after {
+                font-size: 16px;
+                color: $secondary;
+            }
+
+            &:hover {
+                box-shadow: 1px 1px 37px -8px rgba($secondary, 1);
+            }
+        }
+
+        &-prev {
+            left: 0;
+        }
+
+        &-next {
+            right: 0;
+        }
+    }
+
+    &:not(:hover) .swiper-button {
+        &-prev {
+            left: -50px;
+        }
+
+        &-next {
+            right: -50px;
+        }
+    }
+}

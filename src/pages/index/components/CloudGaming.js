@@ -38,7 +38,7 @@ const CloudGaming = () => {
                     AnimationDelay={300}
                     AnimationEasing={'ease'}
                 >
-                    <Button className={`cloud-gaming__button${PlayVideo ? ' playing' : ''}`} onClick={playVideo}></Button>
+                    <Button className={`cloud-gaming__button${PlayVideo ? ' playing' : ''}`} onClick={playVideo}/>
                     <Video
                         src={HomeVideo}
                         type="mp4"

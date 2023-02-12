@@ -1,11 +1,8 @@
 import React from 'react'
-
 import Image from '../../../components/elements/Image'
 import Esports from '../../../components/Esports'
-import AnimateOnScroll from '../../../components/AnimateOnScroll'
-
-import GamingNeedsData from '../../../data/GamingNeedsData'
-
+import Observe from '../../../components/Observe'
+import GamingNeedsData from '../../../data/gaming-needs.json'
 import needsIcon from '../../../assets/svg/dot-icon.svg'
 
 const GamingNeeds = () => {
@@ -18,12 +15,7 @@ const GamingNeeds = () => {
                 <div className="gaming-needs__grid">
                     {GamingNeedsData.map((item, index) => {
                         return (
-                            <AnimateOnScroll key={index}
-                                AnimationOrigin={item.origin}
-                                AnimationDistance={'80px'}
-                                AnimationDelay={300}
-                                className="gaming-needs__grid--item"
-                            >
+                            <Observe key={index} className="gaming-needs__grid--item">
                                 <Image
                                     src={needsIcon}
                                     width={20}
@@ -34,7 +26,7 @@ const GamingNeeds = () => {
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>
                                 </article>
-                            </AnimateOnScroll>
+                            </Observe>
                         )
                     })}
                 </div>

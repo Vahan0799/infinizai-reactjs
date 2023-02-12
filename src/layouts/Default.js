@@ -1,8 +1,8 @@
 import React from 'react'
 
 import HeadMeta from '../components/HeadMeta'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from './Header'
+import Footer from './Footer'
 
 const DefaultLayout = props => {
     const {

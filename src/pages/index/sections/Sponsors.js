@@ -1,9 +1,7 @@
 import React from 'react'
-
-import Underline from '../../../components/elements/Underline'
+import Underline from '../../../components/Underline'
 import Image from '../../../components/elements/Image'
-import AnimateOnScroll from '../../../components/AnimateOnScroll'
-
+import Observe from '../../../components/Observe'
 import SponsorData from '../../../data/SponsorData'
 
 const Sponsors = () => {
@@ -15,13 +13,10 @@ const Sponsors = () => {
 					pulvinar neque.</p>
             </div>
 
-            <div className="sponsors__list container">
+            <Observe className="sponsors__list container">
                 {SponsorData.map((item, index) => {
                     return (
-                        <AnimateOnScroll key={index}
-                            AnimationDistance={'50px'}
-                            AnimationOrigin={item.origin}
-                            AnimationEasing={'ease'}
+                        <div key={index}
                             className="sponsors__list--item"
                         >
                             <Image
@@ -30,10 +25,10 @@ const Sponsors = () => {
                                 width={104}
                                 height={35}
                             />
-                        </AnimateOnScroll>
+                        </div>
                     )
                 })}
-            </div>
+            </Observe>
         </section>
     )
 }

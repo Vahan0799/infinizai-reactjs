@@ -12,7 +12,7 @@ const Underline = props => {
     const underlineVisible = () => {
         const threshold = 0.01
         const observer = new IntersectionObserver(([entry]) => {
-            entry.intersectionRatio > threshold ? setFillColor(true) : setFillColor(false)
+            if (entry.intersectionRatio > threshold) setFillColor(true)
         },
         {
             root: null,
@@ -23,7 +23,7 @@ const Underline = props => {
     }
 
     const classNames = () => {
-        return `underline${fillColor ? ` underline-${color}` : ''}`
+        return `underline${fillColor ? ` underline-${color} in-view` : ''}`
     }
 
     useEffect(() => {

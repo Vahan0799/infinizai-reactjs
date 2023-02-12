@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 
-import LinkElem from './elements/Link'
-import Image from './elements/Image'
-import Button from './elements/Button'
+import LinkElem from '../components/elements/Link'
+import Image from '../components/elements/Image'
+import Button from '../components/elements/Button'
 
 import HeaderItems from '../data/header.json'
 

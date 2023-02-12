@@ -1,0 +1,107 @@
+.video {
+    &-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-playback {
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        background-color: rgba($white, 0.75);
+        @include center(both);
+        z-index: 1;
+        border: none;
+        padding: 0;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 105px;
+            height: 105px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: .4s ease;
+        }
+
+        &::before {
+            background-color: rgba($white, 0.85);
+            transform: translate(-50%, -50%) scale(0.95);
+            border-radius: 50%;
+        }
+
+        &::after {
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+
+        &:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        &:not(.playing) {
+            &::after {
+                background-image: url('../../svg/play-icon.svg');
+                transform: translate(-47%, -50%) scale(1.1);
+            }
+
+            &:hover::after {
+                transform: translate(-47%, -50%) scale(0.8);
+            }
+        }
+
+        &.playing {
+            opacity: 0;
+
+            &::after {
+                background-image: url('../../svg/pause-icon.svg');
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-controls {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: min(100% - 15px, 90%);
+        bottom: 25px;
+        left: 20px;
+
+        @include media-breakpoint-down(lg) {
+            left: 10px;
+        }
+
+        .progress {
+            width: min(100% - 10px, 75%);
+            background-color: rgba($primary, 0.5);
+            height: 5px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            @include media-breakpoint-down(lg) {
+                width: min(100% - 10px, 65%);
+            }
+
+            .bar {
+                background-color: $secondary;
+                height: 100%;
+            }
+        }
+
+        .timeline {
+            margin: 0 10px;
+            font-size: 12px;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 2vw;
+            }
+        }
+    }
+}

@@ -1,27 +1,12 @@
-import React, {useRef, useState} from 'react'
-
+import React from 'react'
 import LinkElem from '../../../components/elements/Link'
 import Video from '../../../components/elements/Video'
-import Button from '../../../components/elements/Button'
 import Esports from '../../../components/Esports'
-import AnimateOnScroll from '../../../components/AnimateOnScroll'
-
+import Observe from '../../../components/Observe'
 import HomeVideo from '../../../assets/videos/home-video.mp4'
 import VideoPoster from '../../../assets/images/video-poster.jpg'
 
 const CloudGaming = () => {
-    const VideoElem = useRef(null)
-    const [PlayVideo, setPlayVideo] = useState(false)
-
-    const playVideo = () => {
-        if (!PlayVideo) {
-            VideoElem?.current.play()
-            setPlayVideo(true)
-        } else {
-            VideoElem?.current.pause()
-            setPlayVideo(false)
-        }
-    }
 
     return (
         <section className="cloud-gaming">
@@ -32,21 +17,14 @@ const CloudGaming = () => {
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia</p>
                     <LinkElem to="#." type="solid-secondary">Explore More</LinkElem>
                 </article>
-                <AnimateOnScroll className="cloud-gaming__media"
-                    AnimationOrigin="top"
-                    AnimationDistance={'80px'}
-                    AnimationDelay={300}
-                    AnimationEasing={'ease'}
-                >
-                    <Button className={`cloud-gaming__button${PlayVideo ? ' playing' : ''}`} onClick={playVideo}/>
+                <Observe className="cloud-gaming__media" threshold={0.5}>
                     <Video
                         src={HomeVideo}
                         type="mp4"
                         poster={VideoPoster}
                         loop
-                        ref={VideoElem}
                     />
-                </AnimateOnScroll>
+                </Observe>
             </div>
         </section>
     )

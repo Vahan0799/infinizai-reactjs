@@ -1,11 +1,9 @@
 import React, {useState} from 'react'
 import {Controller, Navigation} from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react'
-
 import Image from '../../../components/elements/Image'
 import Esports from '../../../components/Esports'
-import AnimateOnScroll from '../../../components/AnimateOnScroll'
-
+import Observe from '../../../components/Observe'
 import {CharacterPortrait, CharacterDescription} from '../../../data/Characters'
 
 const Characters = () => {
@@ -41,13 +39,8 @@ const Characters = () => {
     return(
         <section className="characters">
             <div className="characters__container">
-                <div className="characters__single">
-                    <AnimateOnScroll
-                        AnimationOrigin="left"
-                        AnimationDistance={'80px'}
-                        AnimationDelay={300}
-                        AnimationEasing={'ease'}
-                    >
+                <Observe className="characters__single--wrapper">
+                    <div className="characters__single">
                         <Swiper
                             {...firstSlider}
                             onSwiper={setControlledSwiper2}
@@ -60,14 +53,9 @@ const Characters = () => {
                                 </SwiperSlide>
                             )}
                         </Swiper>
-                    </AnimateOnScroll>
-                </div>
-                <AnimateOnScroll
-                    AnimationOrigin="right"
-                    AnimationDistance={'80px'}
-                    AnimationDelay={300}
-                    AnimationEasing={'ease'}
-                >
+                    </div>
+                </Observe>
+                <Observe className="characters__description--wrapper">
                     <div className="characters__description">
                         <Esports/>
                         <article>
@@ -87,7 +75,7 @@ const Characters = () => {
                             )}
                         </Swiper>
                     </div>
-                </AnimateOnScroll>
+                </Observe>
             </div>
         </section>
     )

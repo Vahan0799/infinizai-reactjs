@@ -6,12 +6,10 @@ import NotFound from '../pages/NotFound'
 
 const Routing = () => {
     return (
-        <>
-            <Routes>
-                <Route path='/' element={<Index/>} exact/>
-                <Route path='*' element={<NotFound/>} exact/>
-            </Routes>
-        </>
+        <Routes>
+            <Route path='/' element={<Index/>} exact/>
+            <Route path='*' element={<NotFound/>} exact/>
+        </Routes>
     )
 }
 export default Routing

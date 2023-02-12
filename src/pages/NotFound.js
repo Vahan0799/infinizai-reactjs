@@ -1,12 +1,9 @@
 import React, {useRef, useEffect} from 'react'
 import {gsap} from 'gsap/all'
-
 import Image from '../components/elements/Image'
 import LinkElem from '../components/elements/Link'
-import Underline from '../components/elements/Underline'
-
+import Underline from '../components/Underline'
 import Empty from '../layouts/Empty'
-
 import NotFoundImage from '../assets/images/character-image.png'
 
 const NotFound = () => {
@@ -33,9 +30,8 @@ const NotFound = () => {
         <Empty title="NOT FOUND" description="The page you are trying to reach does not exist.">
             <section className="not-found">
                 <div className="not-found__content">
-                    <div className="not-found__image">
+                    <div className="not-found__image" ref={notFound}>
                         <Image
-                            ref={notFound}
                             src={NotFoundImage}
                             width={596}
                             height={695}

@@ -8,6 +8,7 @@
 
 // Components
 @import './components/buttons';
+@import './components/video';
 @import './components/swiper';
 @import './components/underline';
 @import './components/esports';
@@ -16,6 +17,12 @@
 @import './layouts/header';
 @import './layouts/footer';
 
+// Pages --> Home
+@import './pages/home/hero';
+@import './pages/home/sponsors';
+@import './pages/home/gaming-needs';
+@import './pages/home/cloud-gaming';
+@import './pages/home/characters';
+
 // Pages
-@import './pages/home';
 @import './pages/not-found';

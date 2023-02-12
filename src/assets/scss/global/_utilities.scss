@@ -3,6 +3,10 @@
     background-color: $gray-300;
 }
 
+main {
+    overflow: hidden;
+}
+
 body {
     &::-webkit-scrollbar {
         display: none;

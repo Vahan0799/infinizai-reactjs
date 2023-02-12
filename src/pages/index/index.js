@@ -1,12 +1,10 @@
 import React from 'react'
-
 import DefaultLayout from '../../layouts/Default'
-
-import Hero from './components/Hero'
-import Sponsors from './components/Sponsors'
-import GamingNeeds from './components/GamingNeeds'
-import CloudGaming from './components/CloudGaming'
-import Characters from './components/Characters'
+import Hero from './sections/Hero'
+import Sponsors from './sections/Sponsors'
+import GamingNeeds from './sections/GamingNeeds'
+import CloudGaming from './sections/CloudGaming'
+import Characters from './sections/Characters'
 
 const Index = () => {
     return (

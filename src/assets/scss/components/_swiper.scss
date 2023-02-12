@@ -35,12 +35,14 @@
     }
 
     &:not(:hover) .swiper-button {
-        &-prev {
-            left: -50px;
-        }
+        @include media-breakpoint-up(lg) {
+            &-prev {
+                left: -50px;
+            }
 
-        &-next {
-            right: -50px;
+            &-next {
+                right: -50px;
+            }
         }
     }
 }

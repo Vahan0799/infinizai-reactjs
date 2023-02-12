@@ -1,7 +1,5 @@
 import React from 'react'
-
 import Image from './elements/Image'
-
 import Icon from '../assets/svg/fire-icon.svg'
 
 const Esports = () => {

@@ -1,45 +1,23 @@
-import React, {useEffect, useRef} from 'react'
-import {gsap} from 'gsap/all'
-
-import Underline from '../../../components/elements/Underline'
+import React, {useState, useEffect} from 'react'
+import Underline from '../../../components/Underline'
 import LinkElem from '../../../components/elements/Link'
 import Image from '../../../components/elements/Image'
-
+import Observe from '../../../components/Observe'
 import Esports from '../../../components/Esports'
-
 import HeroImage from '../../../assets/images/hero-img.png'
 
 const Hero = () => {
-    const socialElements = useRef(null)
-    const heroImage = useRef(null)
-
-    const revealAnimations = () => {
-        // Social links sidebar
-        gsap.to(socialElements?.current, {
-            left: 4,
-            ease: 'Power4.EaseOut'
-        }).timeScale(0.5)
-
-        // Hero image reveal
-        gsap.fromTo(heroImage?.current, {
-            opacity: 0,
-            scale: 0.2,
-            ease: 'Power4.EaseInOut'
-        }, {
-            opacity: 1,
-            scale: 1
-        }).delay(0.4).timeScale(0.5)
-    }
+    const [loadSidebar, setLoadSidebar] = useState(false)
 
     useEffect(() => {
-        revealAnimations()
+        setLoadSidebar(true)
     },[])
 
     return(
         <section className="hero">
             <div className="hero__container">
                 <div className="hero__left">
-                    <aside className="hero__social" ref={socialElements}>
+                    <aside className={`hero__social${loadSidebar ? ' in-view': ''}`}>
                         <div className="hero__social--container">
                             <LinkElem to="#." type="secondary">Facebook</LinkElem>
                             <LinkElem to="#." type="secondary">Instagram</LinkElem>
@@ -57,14 +35,14 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="hero__right">
-                    <div className="hero__img"  ref={heroImage}>
+                    <Observe className="hero__img">
                         <Image
                             src={HeroImage}
                             width={660}
                             height={518}
                             alt={'hero-png'}
                         />
-                    </div>
+                    </Observe>
                 </div>
             </div>
         </section>

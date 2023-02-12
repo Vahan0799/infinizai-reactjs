@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
-import {Controller, Navigation} from 'swiper'
-import {Swiper, SwiperSlide} from 'swiper/react'
-import Image from '../../../components/elements/Image'
-import Esports from '../../../components/Esports'
-import Observe from '../../../components/Observe'
-import {CharacterPortrait, CharacterDescription} from '../../../data/Characters'
+import React, {useState} from 'react';
+import {Controller, Navigation} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import Image from '../../../components/elements/Image';
+import Esports from '../../../components/Esports';
+import Observe from '../../../components/Observe';
+import {CharacterPortrait, CharacterDescription} from '../../../data/Characters';
 
 const Characters = () => {
-    const [controlledSwiper, setControlledSwiper] = useState(null)
-    const [controlledSwiper2, setControlledSwiper2] = useState(null)
+    const [controlledSwiper, setControlledSwiper] = useState(null);
+    const [controlledSwiper2, setControlledSwiper2] = useState(null);
 
     const firstSlider = {
         modules: [Controller],
@@ -20,7 +20,7 @@ const Characters = () => {
         controller: {
             control: controlledSwiper
         }
-    }
+    };
 
     const secondSlider = {
         modules: [Controller, Navigation],
@@ -34,7 +34,7 @@ const Characters = () => {
         controller: {
             control: controlledSwiper2
         }
-    }
+    };
 
     return(
         <section className="characters">
@@ -78,7 +78,7 @@ const Characters = () => {
                 </Observe>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Characters
+export default Characters;

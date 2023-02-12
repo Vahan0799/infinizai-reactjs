@@ -1,17 +1,17 @@
-import React, {useState, useEffect} from 'react'
-import Underline from '../../../components/Underline'
-import LinkElem from '../../../components/elements/Link'
-import Image from '../../../components/elements/Image'
-import Observe from '../../../components/Observe'
-import Esports from '../../../components/Esports'
-import HeroImage from '../../../assets/images/hero-img.png'
+import React, {useState, useEffect} from 'react';
+import Underline from '../../../components/Underline';
+import LinkElem from '../../../components/elements/Link';
+import Image from '../../../components/elements/Image';
+import Observe from '../../../components/Observe';
+import Esports from '../../../components/Esports';
+import HeroImage from '../../../assets/images/hero-img.png';
 
 const Hero = () => {
-    const [loadSidebar, setLoadSidebar] = useState(false)
+    const [loadSidebar, setLoadSidebar] = useState(false);
 
     useEffect(() => {
-        setLoadSidebar(true)
-    },[])
+        setLoadSidebar(true);
+    },[]);
 
     return(
         <section className="hero">
@@ -46,7 +46,7 @@ const Hero = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

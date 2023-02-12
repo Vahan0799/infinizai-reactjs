@@ -1,8 +1,8 @@
-import React from 'react'
-import Underline from '../../../components/Underline'
-import Image from '../../../components/elements/Image'
-import Observe from '../../../components/Observe'
-import SponsorData from '../../../data/SponsorData'
+import React from 'react';
+import Underline from '../../../components/Underline';
+import Image from '../../../components/elements/Image';
+import Observe from '../../../components/Observe';
+import SponsorData from '../../../data/SponsorData';
 
 const Sponsors = () => {
     return (
@@ -26,11 +26,11 @@ const Sponsors = () => {
                                 height={35}
                             />
                         </div>
-                    )
+                    );
                 })}
             </Observe>
         </section>
-    )
-}
+    );
+};
 
-export default Sponsors
+export default Sponsors;

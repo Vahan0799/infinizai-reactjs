@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import HeadMeta from '../components/HeadMeta'
-import Header from './Header'
-import Footer from './Footer'
+import HeadMeta from '../components/HeadMeta';
+import Header from './Header';
+import Footer from './Footer';
 
 const DefaultLayout = props => {
     const {
@@ -10,7 +10,7 @@ const DefaultLayout = props => {
         description,
         image,
         children
-    } = props
+    } = props;
 
     return (
         <>
@@ -23,7 +23,7 @@ const DefaultLayout = props => {
                 <Footer/>
             </main>
         </>
-    )
-}
+    );
+};
 
-export default DefaultLayout
+export default DefaultLayout;

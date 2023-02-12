@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 
 const Input = props => {
     const {
@@ -13,25 +13,25 @@ const Input = props => {
         autocomplete,
         name,
         ...rest
-    } = props
+    } = props;
 
-    const [stateValue, setStateValue] = useState(value)
+    const [stateValue, setStateValue] = useState(value);
 
     useEffect(() => {
         if (onChange) {
-            onChange({ target: { name, value: stateValue } })
+            onChange({ target: { name, value: stateValue } });
         }
-    }, [stateValue])
+    }, [stateValue]);
 
     useEffect(() => {
         if (stateValue !== value) {
-            setStateValue(value)
+            setStateValue(value);
         }
-    }, [value])
+    }, [value]);
 
     const changeHandler = (e) =>{
-        setStateValue(e.target.value)
-    }
+        setStateValue(e.target.value);
+    };
 
     return(
         <div className={`input--wrapper${className}`}>
@@ -52,7 +52,7 @@ const Input = props => {
                 {placeholder}
             </label>
         </div>
-    )
-}
+    );
+};
 
-export default Input
+export default Input;

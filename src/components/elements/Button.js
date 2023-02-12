@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Button = props => {
     const {
@@ -7,11 +7,11 @@ const Button = props => {
         design,
         color,
         ...rest
-    } = props
+    } = props;
 
     const classNames = () => {
-        return `btn${design ? ` btn-${design}` : ''} ${className || ''}`
-    }
+        return `btn${design ? ` btn-${design}` : ''} ${className || ''}`;
+    };
 
     return (
         <button className={classNames()}
@@ -33,7 +33,7 @@ const Button = props => {
                 </>
             )}
         </button>
-    )
-}
+    );
+};
 
-export default Button
+export default Button;

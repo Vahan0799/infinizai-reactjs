@@ -1,10 +1,11 @@
-import React from 'react'
-import DefaultLayout from '../../layouts/Default'
-import Hero from './sections/Hero'
-import Sponsors from './sections/Sponsors'
-import GamingNeeds from './sections/GamingNeeds'
-import CloudGaming from './sections/CloudGaming'
-import Characters from './sections/Characters'
+import React from 'react';
+import DefaultLayout from '../../layouts/Default';
+import Hero from './sections/Hero';
+import Sponsors from './sections/Sponsors';
+import GamingNeeds from './sections/GamingNeeds';
+import CloudGaming from './sections/CloudGaming';
+import Characters from './sections/Characters';
+import Categories from './sections/Categories';
 
 const Index = () => {
     return (
@@ -14,8 +15,9 @@ const Index = () => {
             <GamingNeeds/>
             <CloudGaming/>
             <Characters/>
+            <Categories/>
         </DefaultLayout>
-    )
-}
+    );
+};
 
-export default Index
+export default Index;

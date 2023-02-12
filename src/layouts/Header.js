@@ -1,45 +1,45 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 
-import LinkElem from '../components/elements/Link'
-import Image from '../components/elements/Image'
-import Button from '../components/elements/Button'
+import LinkElem from '../components/elements/Link';
+import Image from '../components/elements/Image';
+import Button from '../components/elements/Button';
 
-import HeaderItems from '../data/header.json'
+import HeaderItems from '../data/header.json';
 
-import Logo from '../assets/svg/logo.svg'
-import CartIcon from '../assets/svg/cart-icon.svg'
+import Logo from '../assets/svg/logo.svg';
+import CartIcon from '../assets/svg/cart-icon.svg';
 
 const Header = () => {
-    const [navOpen, setNavOpen] = useState(false)
-    const [position, setPosition] = useState(window.scrollY)
-    const [headerSticky, setHeaderSticky] = useState(false)
-    const [atTop, setAtTop] = useState(true)
+    const [navOpen, setNavOpen] = useState(false);
+    const [position, setPosition] = useState(window.scrollY);
+    const [headerSticky, setHeaderSticky] = useState(false);
+    const [atTop, setAtTop] = useState(true);
 
     const toggleNav = () => {
-        setNavOpen(!navOpen)
-    }
+        setNavOpen(!navOpen);
+    };
 
     const stickyHeader = () => {
-        let moving = window.scrollY
+        let moving = window.scrollY;
 
         if (window.scrollY > 5 && !navOpen) {
-            setHeaderSticky(position > moving)
-            setPosition(moving)
-            setAtTop(false)
+            setHeaderSticky(position > moving);
+            setPosition(moving);
+            setAtTop(false);
 
         } else if (window.scrollY <= 5 && !navOpen) {
-            setAtTop(true)
-            setHeaderSticky(false)
+            setAtTop(true);
+            setHeaderSticky(false);
         }
-    }
+    };
 
     useEffect(() => {
-        window.addEventListener('scroll', stickyHeader)
+        window.addEventListener('scroll', stickyHeader);
 
         return () => {
-            window.removeEventListener('scroll', stickyHeader)
-        }
-    })
+            window.removeEventListener('scroll', stickyHeader);
+        };
+    });
 
     return (
         <header className={`header${headerSticky ? ' header__sticky' : ''}${atTop ? ' header__visible' : ''}`}>
@@ -90,7 +90,7 @@ const Header = () => {
                 </nav>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

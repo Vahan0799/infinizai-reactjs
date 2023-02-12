@@ -1,5 +1,5 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 const LinkElem = props => {
     const {
@@ -7,11 +7,11 @@ const LinkElem = props => {
         color,
         children,
         ...rest
-    } = props
+    } = props;
 
     const classNames = () => {
-        return `link${type ? ` link-${type}` : ''}`
-    }
+        return `link${type ? ` link-${type}` : ''}`;
+    };
 
     return (
         <Link className={classNames()} {...rest}>
@@ -23,7 +23,7 @@ const LinkElem = props => {
                 </>
             )}
         </Link>
-    )
-}
+    );
+};
 
-export default LinkElem
+export default LinkElem;

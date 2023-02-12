@@ -1,9 +1,9 @@
-import Character1 from '../assets/images/character-1.png'
-import Character2 from '../assets/images/character-2.png'
-import Character3 from '../assets/images/character-3.png'
-import Description1 from '../assets/images/video-poster.jpg'
-import Description2 from '../assets/images/poster-1.jpg'
-import Description3 from '../assets/images/poster-2.jpg'
+import Character1 from '../assets/images/character-1.png';
+import Character2 from '../assets/images/character-2.png';
+import Character3 from '../assets/images/character-3.png';
+import Description1 from '../assets/images/video-poster.jpg';
+import Description2 from '../assets/images/poster-1.jpg';
+import Description3 from '../assets/images/poster-2.jpg';
 
 const CharacterPortrait = [
     {
@@ -18,7 +18,7 @@ const CharacterPortrait = [
         image: Character3,
         alt: 'Character 3'
     }
-]
+];
 
 const CharacterDescription = [
     {
@@ -33,6 +33,6 @@ const CharacterDescription = [
         image: Description3,
         alt: 'RE 2 remake'
     }
-]
+];
 
-export {CharacterPortrait, CharacterDescription}
+export {CharacterPortrait, CharacterDescription};

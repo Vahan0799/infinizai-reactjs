@@ -1,5 +1,5 @@
-import React from 'react'
-import HeadMeta from '../components/HeadMeta'
+import React from 'react';
+import HeadMeta from '../components/HeadMeta';
 
 const Empty = props => {
     const {
@@ -7,7 +7,7 @@ const Empty = props => {
         description,
         image,
         children
-    } = props
+    } = props;
 
     return (
         <>
@@ -18,7 +18,7 @@ const Empty = props => {
                 </div>
             </main>
         </>
-    )
-}
+    );
+};
 
-export default Empty
+export default Empty;

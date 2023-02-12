@@ -70,12 +70,25 @@
         position: absolute;
         display: flex;
         align-items: center;
+        flex-direction: column;
         width: min(100% - 15px, 90%);
-        bottom: 25px;
+        padding: 20px 0;
+        bottom: -20px;
         left: 20px;
+        overflow: hidden;
+        transition: bottom ease .4s;
+        user-select: none;
 
         @include media-breakpoint-down(lg) {
             left: 10px;
+        }
+
+        &:hover {
+            bottom: -8px;
+
+            .video-buttons {
+                transform: translateY(0);
+            }
         }
 
         .progress {
@@ -83,25 +96,85 @@
             background-color: rgba($primary, 0.5);
             height: 5px;
             border-radius: 10px;
-            overflow: hidden;
 
             @include media-breakpoint-down(lg) {
                 width: min(100% - 10px, 65%);
             }
 
             .bar {
+                display: block;
                 background-color: $secondary;
                 height: 100%;
+                position: relative;
+                border-radius: 10px;
+
+                //&::after {
+                //    content: '';
+                //    width: 13px;
+                //    height: 13px;
+                //    border-radius: 50%;
+                //    background-color: $secondary;
+                //    @include center(vertical);
+                //    right: 0;
+                //}
             }
         }
 
         .timeline {
-            margin: 0 10px;
             font-size: 12px;
 
             @include media-breakpoint-down(lg) {
                 font-size: 2vw;
             }
+        }
+    }
+
+    &-duration,
+    &-buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-buttons {
+        margin-top: 10px;
+        transform: translateY(100%);
+        transition: transform ease .4s;
+    }
+
+    &-forwards {
+        display: flex;
+        align-items: center;
+
+        .backwards,
+        .forwards {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .backwards {
+            background-image: url('../../svg/backward-icon.svg');
+        }
+
+        .forwards {
+            background-image: url('../../svg/forward-icon.svg');
+        }
+    }
+
+    &-expands {
+        .fullscreen {
+            width: 20px;
+            height: 23px;
+            cursor: pointer;
+            background-size: 20px 23px;
+            background-repeat: no-repeat;
+            background-image: url('../../svg/fullscreen-icon.svg');
         }
     }
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Image = props => {
     const {
@@ -7,11 +7,11 @@ const Image = props => {
         alt,
         width,
         height
-    } = props
+    } = props;
 
     return (
         <img src={src} alt={alt} width={width} height={height} className={className}/>
-    )
-}
+    );
+};
 
-export default Image
+export default Image;

@@ -1,10 +1,10 @@
-import React from 'react'
-import LinkElem from '../../../components/elements/Link'
-import Video from '../../../components/elements/Video'
-import Esports from '../../../components/Esports'
-import Observe from '../../../components/Observe'
-import HomeVideo from '../../../assets/videos/home-video.mp4'
-import VideoPoster from '../../../assets/images/video-poster.jpg'
+import React from 'react';
+import LinkElem from '../../../components/elements/Link';
+import Video from '../../../components/elements/Video';
+import Esports from '../../../components/Esports';
+import Observe from '../../../components/Observe';
+import HomeVideo from '../../../assets/videos/home-video.mp4';
+import VideoPoster from '../../../assets/images/video-poster.jpg';
 
 const CloudGaming = () => {
 
@@ -27,7 +27,7 @@ const CloudGaming = () => {
                 </Observe>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default CloudGaming
+export default CloudGaming;

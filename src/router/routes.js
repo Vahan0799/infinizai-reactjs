@@ -1,8 +1,8 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
 
-import Index from '../pages/index'
-import NotFound from '../pages/NotFound'
+import Index from '../pages/index';
+import NotFound from '../pages/NotFound';
 
 const Routing = () => {
     return (
@@ -10,6 +10,6 @@ const Routing = () => {
             <Route path='/' element={<Index/>} exact/>
             <Route path='*' element={<NotFound/>} exact/>
         </Routes>
-    )
-}
-export default Routing
+    );
+};
+export default Routing;

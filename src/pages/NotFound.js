@@ -1,13 +1,13 @@
-import React, {useRef, useEffect} from 'react'
-import {gsap} from 'gsap/all'
-import Image from '../components/elements/Image'
-import LinkElem from '../components/elements/Link'
-import Underline from '../components/Underline'
-import Empty from '../layouts/Empty'
-import NotFoundImage from '../assets/images/character-image.png'
+import React, {useRef, useEffect} from 'react';
+import {gsap} from 'gsap/all';
+import Image from '../components/elements/Image';
+import LinkElem from '../components/elements/Link';
+import Underline from '../components/Underline';
+import Empty from '../layouts/Empty';
+import NotFoundImage from '../assets/images/character-image.png';
 
 const NotFound = () => {
-    const notFound = useRef(null)
+    const notFound = useRef(null);
 
     const RevealImage = () => {
         gsap.fromTo(notFound?.current, {
@@ -17,14 +17,14 @@ const NotFound = () => {
         }, {
             opacity: 1,
             translateX: 0
-        }).timeScale(0.5)
-    }
+        }).timeScale(0.5);
+    };
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            RevealImage()
+            RevealImage();
         }
-    },[])
+    },[]);
 
     return (
         <Empty title="NOT FOUND" description="The page you are trying to reach does not exist.">
@@ -47,7 +47,7 @@ const NotFound = () => {
                 </div>
             </section>
         </Empty>
-    )
-}
+    );
+};
 
-export default NotFound
+export default NotFound;

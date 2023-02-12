@@ -1,6 +1,6 @@
-import React from 'react'
-import Image from './elements/Image'
-import Icon from '../assets/svg/fire-icon.svg'
+import React from 'react';
+import Image from './elements/Image';
+import Icon from '../assets/svg/fire-icon.svg';
 
 const Esports = () => {
     return(
@@ -13,7 +13,7 @@ const Esports = () => {
             />
             <p>FUTURE OS ESPORTS</p>
         </div>
-    )
-}
+    );
+};
 
-export default Esports
+export default Esports;

@@ -1,12 +1,12 @@
-import React from 'react'
-import {Helmet} from 'react-helmet'
+import React from 'react';
+import {Helmet} from 'react-helmet';
 
 const HeadMeta = props => {
     const {
         title,
         description,
         image
-    } = props
+    } = props;
 
     return (
         <Helmet>
@@ -22,7 +22,7 @@ const HeadMeta = props => {
             <meta data-hid="twitter:image" property="twitter:image" content={image} />
             <title>Infinizai | {title}</title>
         </Helmet>
-    )
-}
+    );
+};
 
-export default HeadMeta
+export default HeadMeta;

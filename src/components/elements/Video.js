@@ -1,5 +1,5 @@
-import React, {useRef, useState, useEffect} from 'react'
-import Button from './Button'
+import React, {useEffect, useRef, useState} from 'react';
+import Button from './Button';
 
 const Video = props => {
     const {
@@ -8,35 +8,34 @@ const Video = props => {
         fallBackSrc,
         fallBackType,
         ...rest
-    } = props
+    } = props;
 
-    const videoElement = useRef(null)
-    const timeLine = useRef(null)
-    const [PlayVideo, setPlayVideo] = useState(false)
-    const [progress, setProgress] = useState(0)
-    const [currentTime, setCurrentTime] = useState(0)
+    const videoElement = useRef(null);
+    const [PlayVideo, setPlayVideo] = useState(false);
+    const [progress, setProgress] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);
 
-    let interval
+    let interval;
 
     const playVideo = () => {
-        !PlayVideo ? setPlayVideo(videoElement?.current.play()) : setPlayVideo(videoElement?.current.pause())
-    }
+        !PlayVideo ? setPlayVideo(videoElement?.current.play()) : setPlayVideo(videoElement?.current.pause());
+    };
 
     const updateVideoTime = () => {
-        setProgress((videoElement?.current.currentTime / videoElement?.current.duration) * 100)
+        setProgress((videoElement?.current.currentTime / videoElement?.current.duration) * 100);
 
         interval = setInterval(() => {
-            setCurrentTime(videoElement?.current.currentTime)
-        },1000)
-    }
+            setCurrentTime(videoElement?.current.currentTime);
+        },1000);
+    };
 
-    const currentPlayBack = Math.floor(currentTime / 60) + ':' + ('0' + Math.floor(currentTime % 60)).slice(-2)
+    const currentPlayBack = Math.floor(currentTime / 60) + ':' + ('0' + Math.floor(currentTime % 60)).slice(-2);
 
-    const currentVideoDuration = Math.floor(videoElement.current?.duration / 60) + ':' + ('0' + Math.floor(videoElement.current?.duration % 60)).slice(-2)
+    const currentVideoDuration = Math.floor(videoElement.current?.duration / 60) + ':' + ('0' + Math.floor(videoElement.current?.duration % 60)).slice(-2);
 
     useEffect(() => {
-        return () => clearInterval(interval)
-    },[])
+        return () => clearInterval(interval);
+    },[]);
 
     return (
         <div className="video-container">
@@ -52,16 +51,27 @@ const Video = props => {
             </video>
             {PlayVideo &&
                 <div className="video-controls">
-                    <div className="progress" ref={timeLine}>
-                        <div className="bar" style={{width: `${progress}%`}}/>
+                    <div className="video-duration">
+                        <div className="progress">
+                            <div className="bar" style={{width: `${progress}%`}}/>
+                        </div>
+                        <div className="timeline">
+                            <span>{currentPlayBack} &nbsp; / &nbsp; {currentVideoDuration}</span>
+                        </div>
                     </div>
-                    <div className="timeline">
-                        <span>{currentPlayBack} / {currentVideoDuration}</span>
+                    <div className="video-buttons">
+                        <div className="video-forwards">
+                            <span className="backwards" onClick={() => videoElement.current.currentTime -= 10}/>
+                            <span className="forwards" onClick={() => videoElement.current.currentTime += 10}/>
+                        </div>
+                        <div className="video-expands">
+                            <span className="fullscreen" onClick={() => videoElement.current.requestFullscreen()}/>
+                        </div>
                     </div>
                 </div>
             }
         </div>
-    )
-}
+    );
+};
 
-export default Video
+export default Video;

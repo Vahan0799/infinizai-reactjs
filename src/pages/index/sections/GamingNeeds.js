@@ -1,9 +1,9 @@
-import React from 'react'
-import Image from '../../../components/elements/Image'
-import Esports from '../../../components/Esports'
-import Observe from '../../../components/Observe'
-import GamingNeedsData from '../../../data/gaming-needs.json'
-import needsIcon from '../../../assets/svg/dot-icon.svg'
+import React from 'react';
+import Image from '../../../components/elements/Image';
+import Esports from '../../../components/Esports';
+import Observe from '../../../components/Observe';
+import GamingNeedsData from '../../../data/gaming-needs.json';
+import needsIcon from '../../../assets/svg/dot-icon.svg';
 
 const GamingNeeds = () => {
     return (
@@ -27,12 +27,12 @@ const GamingNeeds = () => {
                                     <p>{item.description}</p>
                                 </article>
                             </Observe>
-                        )
+                        );
                     })}
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default GamingNeeds
+export default GamingNeeds;

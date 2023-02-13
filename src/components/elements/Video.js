@@ -29,6 +29,11 @@ const Video = props => {
         },1000);
     };
 
+    const handleVideoProgress = (event) => {
+		setProgress(Number(event.target.value));
+        videoElement.current.currentTime = (videoElement.current.duration / progress);
+    };
+
     const currentPlayBack = Math.floor(currentTime / 60) + ':' + ('0' + Math.floor(currentTime % 60)).slice(-2);
 
     const currentVideoDuration = Math.floor(videoElement.current?.duration / 60) + ':' + ('0' + Math.floor(videoElement.current?.duration % 60)).slice(-2);
@@ -53,7 +58,14 @@ const Video = props => {
                 <div className="video-controls">
                     <div className="video-duration">
                         <div className="progress">
-                            <div className="bar" style={{width: `${progress}%`}}/>
+                            <input type="range"
+                                   min="0" max="100"
+                                   value={progress}
+								   onMouseDown={() => videoElement.current.pause()}
+								   onMouseUp={() => videoElement.current.play()}
+                                   onChange={(e) => handleVideoProgress(e)}
+                            />
+							<div className="bar" style={{width: `calc(${progress}% + 4px)`}}/>
                         </div>
                         <div className="timeline">
                             <span>{currentPlayBack} &nbsp; / &nbsp; {currentVideoDuration}</span>

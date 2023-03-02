@@ -14,6 +14,7 @@ const Video = props => {
     const [PlayVideo, setPlayVideo] = useState(false);
     const [progress, setProgress] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
+	const [mutedAudio, setMutedAudio] = useState(false);
 
     let interval;
 
@@ -48,6 +49,7 @@ const Video = props => {
             <video {...rest} playsInline ref={videoElement}
                 onClick={playVideo}
                 onTimeUpdate={updateVideoTime}
+				muted={mutedAudio}
             >
                 {fallBackSrc && fallBackType &&
                     <source src={fallBackSrc} type={`video/${fallBackType}`}/>
@@ -58,9 +60,7 @@ const Video = props => {
                 <div className="video-controls">
                     <div className="video-duration">
                         <div className="progress">
-                            <input type="range"
-                                   min="0" max="100"
-                                   value={progress}
+                            <input type="range" min="0" max="100" value={progress}
 								   onMouseDown={() => videoElement.current.pause()}
 								   onMouseUp={() => videoElement.current.play()}
                                    onChange={(e) => handleVideoProgress(e)}
@@ -78,6 +78,8 @@ const Video = props => {
                         </div>
                         <div className="video-expands">
                             <span className="fullscreen" onClick={() => videoElement.current.requestFullscreen()}/>
+                            <input type="checkbox" id="volume-toggle" onChange={() => setMutedAudio(!mutedAudio)}/>
+                            <label htmlFor="volume-toggle"/>
                         </div>
                     </div>
                 </div>

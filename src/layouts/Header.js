@@ -65,7 +65,7 @@ const Header = () => {
                     <div className="nav__inner">
                         <ul className="nav__list">
                             {HeaderItems.headerLinks.map((item, index) =>
-                                <li className="nav__list--item" key={index}>
+                                <li className="nav__list--item" key={`header-link-${index}`}>
                                     <LinkElem to={item.link} type="primary">
                                         {item.title}
                                     </LinkElem>
@@ -82,9 +82,7 @@ const Header = () => {
                                     alt={'cart-icon'}
                                 />
                             </Button>
-                            <Button design="solid-primary" color="#FDD04A">
-								Contact Us
-                            </Button>
+                            <Button design="solid-primary" color="#FDD04A">Contact Us</Button>
                         </div>
                     </div>
                 </nav>

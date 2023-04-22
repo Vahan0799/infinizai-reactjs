@@ -1,9 +1,10 @@
 import React, {useRef, useEffect} from 'react';
-import {gsap} from 'gsap/all';
+import gsap from 'gsap';
 import Image from '../components/elements/Image';
 import LinkElem from '../components/elements/Link';
 import Underline from '../components/Underline';
 import Empty from '../layouts/Empty';
+import Waves from '../components/Waves';
 import NotFoundImage from '../assets/images/character-image.png';
 
 const NotFound = () => {
@@ -21,9 +22,7 @@ const NotFound = () => {
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            RevealImage();
-        }
+        typeof window !== 'undefined' && RevealImage();
     },[]);
 
     return (
@@ -45,6 +44,7 @@ const NotFound = () => {
                         <LinkElem to="/" type="solid-secondary" color="#FDD04A">HOME</LinkElem>
                     </div>
                 </div>
+                <Waves/>
             </section>
         </Empty>
     );

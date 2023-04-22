@@ -13,7 +13,7 @@ const Observe = props => {
 
     const observeElements = () => {
         const observer = new IntersectionObserver(([entry]) => {
-            if (entry.intersectionRatio > threshold) setObserved(true);
+                entry.intersectionRatio > threshold && setObserved(true);
         },
         {
             root: null,

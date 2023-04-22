@@ -16,7 +16,7 @@ const Sponsors = () => {
             <Observe className="sponsors__list container">
                 {SponsorData.map((item, index) => {
                     return (
-                        <div key={index}
+                        <div key={`sponsor-${index}`}
                             className="sponsors__list--item"
                         >
                             <Image

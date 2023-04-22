@@ -9,7 +9,7 @@ const Categories = () => {
             <Observe className="categories__container" threshold={0.5}>
                 {CategoryData.map((item, index) => {
                     return (
-                        <div key={index} className="categories__item">
+                        <div key={`category-${index}`} className="categories__item">
                             <figure>
                                 <Image
                                     src={item.image}

@@ -15,7 +15,7 @@ const GamingNeeds = () => {
                 <div className="gaming-needs__grid">
                     {GamingNeedsData.map((item, index) => {
                         return (
-                            <Observe key={index} className="gaming-needs__grid--item">
+                            <Observe key={`needs-item-${index}`} className="gaming-needs__grid--item">
                                 <Image
                                     src={needsIcon}
                                     width={20}

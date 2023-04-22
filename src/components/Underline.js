@@ -12,7 +12,7 @@ const Underline = props => {
     const underlineVisible = () => {
         const threshold = 0.01;
         const observer = new IntersectionObserver(([entry]) => {
-            if (entry.intersectionRatio > threshold) setFillColor(true);
+                entry.intersectionRatio > threshold && setFillColor(true);
         },
         {
             root: null,

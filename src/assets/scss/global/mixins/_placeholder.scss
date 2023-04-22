@@ -19,6 +19,7 @@
     /* Internet Explorer 10+ */
     color: $color !important;
   }
+
   &::placeholder {
     color: $color !important;
   }
@@ -28,5 +29,17 @@
   &::-webkit-input-placeholder {@content}
   &:-moz-placeholder           {@content}
   &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}  
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin autoComplete($bgColor, $color) {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active,
+  &::placeholder {
+    -webkit-box-shadow: 0 0 0 30px $bgColor inset;
+    -webkit-text-fill-color: $color;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }

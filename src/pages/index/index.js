@@ -6,6 +6,7 @@ import GamingNeeds from './sections/GamingNeeds';
 import CloudGaming from './sections/CloudGaming';
 import Characters from './sections/Characters';
 import Categories from './sections/Categories';
+import Particles from '../../components/Particles';
 
 const Index = () => {
     return (
@@ -16,6 +17,7 @@ const Index = () => {
             <CloudGaming/>
             <Characters/>
             <Categories/>
+            <Particles/>
         </DefaultLayout>
     );
 };

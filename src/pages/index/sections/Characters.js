@@ -46,7 +46,7 @@ const Characters = () => {
                             onSwiper={setControlledSwiper2}
                         >
                             {CharacterPortrait.map((elem, index) =>
-                                <SwiperSlide key={index}>
+                                <SwiperSlide key={`portrait-${index}`}>
                                     <div className="characters__single--img">
                                         <Image src={elem.image} alt={elem.alt} height={512} width={263}/>
                                     </div>
@@ -67,7 +67,7 @@ const Characters = () => {
                             onSwiper={setControlledSwiper}
                         >
                             {CharacterDescription.map((el, key) =>
-                                <SwiperSlide key={key}>
+                                <SwiperSlide key={`description-${key}`}>
                                     <div className="characters__description--item">
                                         <Image src={el.image} alt={el.alt}/>
                                     </div>

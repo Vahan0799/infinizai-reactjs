@@ -1,8 +1,9 @@
 .not-found {
     width: 100%;
     height: 100vh;
-    background-color: $primary;
+    background-image: linear-gradient(180deg, $primary, $secondary);
     position: relative;
+    animation: animate-bg 5s ease infinite alternate-reverse;
 
     &::after {
         content: '';
@@ -20,18 +21,29 @@
         height: 100%;
         display: grid;
         position: relative;
-        z-index: 2;
+        z-index: 3;
         overflow: hidden;
 
         @include media-breakpoint-down(lg) {
             grid-gap: 15px;
-            padding-bottom: 50px;
+            padding: 25px 15px 50px;
         }
 
         @include media-breakpoint-up(lg) {
             margin: 0 auto;
             max-width: 80%;
             grid-template-columns: repeat(2, 50%);
+        }
+    }
+
+    &__image {
+        @include media-breakpoint-down(lg) {
+            max-width: 80%;
+            margin: 0 auto;
+
+            img {
+                object-fit: contain;
+            }
         }
     }
 
@@ -51,6 +63,7 @@
         }
 
         h2 {
+            font-size: 16px;
             color: $gray-300;
             margin-bottom: 15px;
 
@@ -59,5 +72,15 @@
                 margin-bottom: 35px;
             }
         }
+    }
+}
+
+@keyframes animate-bg {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(180deg);
     }
 }

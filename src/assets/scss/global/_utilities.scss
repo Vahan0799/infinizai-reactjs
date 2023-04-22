@@ -7,10 +7,8 @@ main {
     overflow: hidden;
 }
 
-body {
-    &::-webkit-scrollbar {
-        display: none;
-    }
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .container {
@@ -35,6 +33,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
 }
 
 // Extends

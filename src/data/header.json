@@ -2,23 +2,23 @@
   "headerLinks": [
     {
       "title": "Home",
-      "link": "#."
+      "link": "/"
     },
     {
       "title": "About",
-      "link": "#."
+      "link": "/about"
     },
     {
       "title": "Team",
-      "link": "#."
+      "link": "/team"
     },
     {
       "title": "Shop",
-      "link": "#."
+      "link": "/shop"
     },
     {
       "title": "Pages",
-      "link": "#."
+      "link": "/blog"
     }
   ]
 }

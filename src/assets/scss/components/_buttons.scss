@@ -1,7 +1,9 @@
 .btn {
-    font-family: $font-family-primary;
-    font-weight: 400;
-    font-size: 14px;
+    font: {
+        family: $font-family-primary;
+        weight: 400;
+        size: 14px;
+    }
     @extend %full-center;
     transition: all .4s ease;
 
@@ -122,9 +124,11 @@
                 @extend %full-center;
                 background-color: rgba($white, 0.1);
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-                border-top: 1px solid rgba($white, 0.1);
-                border-bottom: 1px solid rgba($white, 0.1);
-                border-radius: 30px;
+                border: {
+                    top: 1px solid rgba($white, 0.1);
+                    bottom: 1px solid rgba($white, 0.1);
+                    radius: 30px;
+                }
                 color: $white;
                 z-index: 1;
                 letter-spacing: 1px;
@@ -188,9 +192,11 @@
             position: absolute;
             left: 0;
             bottom: -3px;
-            transition-property: transform, opacity;
-            transition-duration: .3s;
-            transition-timing-function: linear;
+            transition: {
+                property: transform, opacity;
+                duration: .3s;
+                timing-function: linear;
+            }
             transform: scaleX(0);
             transform-origin: right;
             opacity: 0;

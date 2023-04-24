@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import Image from '../../../components/elements/Image';
 import Esports from '../../../components/Esports';
 import Observe from '../../../components/Observe';
-import {CharacterPortrait, CharacterDescription} from '../../../data/Characters';
+import characters from '../../../jsons/characters.json'
 
 const Characters = () => {
     const [controlledSwiper, setControlledSwiper] = useState(null);
@@ -45,10 +45,10 @@ const Characters = () => {
                             {...firstSlider}
                             onSwiper={setControlledSwiper2}
                         >
-                            {CharacterPortrait.map((elem, index) =>
+                            {characters.CharacterPortrait.map((elem, index) =>
                                 <SwiperSlide key={`portrait-${index}`}>
                                     <div className="characters__single--img">
-                                        <Image src={elem.image} alt={elem.alt} height={512} width={263}/>
+                                        <Image src={require(`../../../assets/images/${elem.image}.png`)} alt={elem.alt} height={512} width={263}/>
                                     </div>
                                 </SwiperSlide>
                             )}
@@ -66,10 +66,10 @@ const Characters = () => {
                             {...secondSlider}
                             onSwiper={setControlledSwiper}
                         >
-                            {CharacterDescription.map((el, key) =>
+                            {characters.CharacterDescription.map((el, key) =>
                                 <SwiperSlide key={`description-${key}`}>
                                     <div className="characters__description--item">
-                                        <Image src={el.image} alt={el.alt}/>
+                                        <Image src={require(`../../../assets/images/${el.image}.jpg`)} alt={el.alt}/>
                                     </div>
                                 </SwiperSlide>
                             )}

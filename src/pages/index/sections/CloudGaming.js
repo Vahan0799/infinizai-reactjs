@@ -15,7 +15,7 @@ const CloudGaming = () => {
                     <Esports/>
                     <h3 className="h2">The New Era Of Cloud Gaming Here</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia</p>
-                    <LinkElem to="#." type="solid-secondary">Explore More</LinkElem>
+                    <LinkElem to="#." design="solid-secondary">Explore More</LinkElem>
                 </article>
                 <Observe className="cloud-gaming__media" threshold={0.5}>
                     <Video

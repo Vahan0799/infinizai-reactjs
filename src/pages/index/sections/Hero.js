@@ -19,9 +19,9 @@ const Hero = () => {
                 <div className="hero__left">
                     <aside className={`hero__social${loadSidebar ? ' in-view': ''}`}>
                         <div className="hero__social--container">
-                            <LinkElem to="#." type="secondary">Facebook</LinkElem>
-                            <LinkElem to="#." type="secondary">Instagram</LinkElem>
-                            <LinkElem to="#." type="secondary">Twitch</LinkElem>
+                            <LinkElem to="#." design="secondary">Facebook</LinkElem>
+                            <LinkElem to="#." design="secondary">Instagram</LinkElem>
+                            <LinkElem to="#." design="secondary">Twitch</LinkElem>
                         </div>
                     </aside>
                     <div className="hero__description">
@@ -29,8 +29,8 @@ const Hero = () => {
                         <h1>Unleash the Next <Underline color="yellow">Generation</Underline> of Gaming</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
                         <div className="hero__description--buttons">
-                            <LinkElem to="#." type="solid-secondary" data-color="#57B8FF">Explore More</LinkElem>
-                            <LinkElem to="#." type="primary">View our team</LinkElem>
+                            <LinkElem to="#." design="solid-secondary" data-color="#57B8FF">Explore More</LinkElem>
+                            <LinkElem to="#." design="primary">View our team</LinkElem>
                         </div>
                     </div>
                 </div>

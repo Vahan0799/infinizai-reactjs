@@ -1,0 +1,30 @@
+{
+  "CharacterPortrait": [
+    {
+      "image": "character-1",
+      "alt": "Character 1"
+    },
+    {
+      "image": "character-2",
+      "alt": "Character 2"
+    },
+    {
+      "image": "character-3",
+      "alt": "Character 3"
+    }
+  ],
+  "CharacterDescription": [
+    {
+      "image": "video-poster",
+      "alt": "Dead by Daylight"
+    },
+    {
+      "image": "poster-1",
+      "alt": "RE 3 remake"
+    },
+    {
+      "image": "poster-2",
+      "alt": "RE 2 remake"
+    }
+  ]
+}

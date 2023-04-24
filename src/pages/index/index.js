@@ -6,7 +6,7 @@ import GamingNeeds from './sections/GamingNeeds';
 import CloudGaming from './sections/CloudGaming';
 import Characters from './sections/Characters';
 import Categories from './sections/Categories';
-import Particles from '../../components/Particles';
+import News from './sections/News';
 
 const Index = () => {
     return (
@@ -17,7 +17,7 @@ const Index = () => {
             <CloudGaming/>
             <Characters/>
             <Categories/>
-            <Particles/>
+            <News/>
         </DefaultLayout>
     );
 };

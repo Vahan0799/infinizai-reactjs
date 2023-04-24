@@ -41,7 +41,7 @@ const NotFound = () => {
                     <div className="not-found__description">
                         <h1>NOT <Underline color="yellow">FOUND</Underline></h1>
                         <h2>The page you are trying to reach does not exist.</h2>
-                        <LinkElem to="/" type="solid-secondary" color="#FDD04A">HOME</LinkElem>
+                        <LinkElem to="/" design="solid-secondary" color="#FDD04A">HOME</LinkElem>
                     </div>
                 </div>
                 <Waves/>

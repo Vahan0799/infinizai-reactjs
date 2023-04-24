@@ -1,0 +1,110 @@
+.news {
+    &__wrapper {
+        background-color: $black;
+    }
+
+    &__container {
+        padding: 50px 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 130px 60px;
+        }
+    }
+
+    &__head {
+        display: flex;
+        width: 100%;
+        margin-bottom: 65px;
+
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+        }
+
+        @include media-breakpoint-up(lg) {
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        & > div {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 20px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                max-width: 530px;
+            }
+        }
+    }
+
+    &__articles {
+        display: grid;
+        grid-gap: 24px;
+
+        @include media-breakpoint-up(lg) {
+            align-items: start;
+            grid-template-columns: 50% 22%;
+            grid-template-areas:
+                    'article-1 article-2 article-3'
+                    'article-1 article-4 article-5';
+        }
+    }
+
+    &__article {
+        @include media-breakpoint-up(lg) {
+            &:not(:first-child) img {
+                max-height: 13vw;
+
+                figcaption a p {
+                    max-width: 214px;
+                }
+            }
+        }
+
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+
+                @include media-breakpoint-up(lg) {
+                    grid-area: article-#{$i};
+                }
+            }
+        }
+
+        .link {
+            display: block;
+        }
+
+        & > .link {
+            border-radius: 30px;
+            overflow: hidden;
+
+            span, img {
+                width: 100%;
+            }
+        }
+
+        figcaption {
+            margin-top: 20px;
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 35px;
+            }
+
+            & > p {
+                color: $primary;
+                margin-bottom: 10px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            a {
+                text-transform: capitalize;
+
+                p {
+                    color: currentColor;
+                }
+            }
+        }
+    }
+}

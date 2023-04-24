@@ -3,24 +3,30 @@ import {Link} from 'react-router-dom';
 
 const LinkElem = props => {
     const {
-        type,
+        design,
         color,
         children,
         ...rest
     } = props;
 
     const classNames = () => {
-        return `link${type ? ` link-${type}` : ''}`;
+        return `link${design ? ` link-${design}` : ''}`;
     };
 
     return (
         <Link className={classNames()} {...rest}>
-            {type === 'solid-secondary' ? (
-                <span>{children}</span>
-            ) : (
+            {design && design === 'solid-primary' || 'solid-secondary' ? (
                 <>
-                    {children}
+                    <span>{children}</span>
+                    {design === 'solid-primary' &&
+                        <>
+                            <i></i>
+                            <i></i>
+                        </>
+                    }
                 </>
+            ) : (
+                {children}
             )}
         </Link>
     );

@@ -17,7 +17,7 @@ const Button = props => {
         <button className={classNames()}
             {...rest}
         >
-            {design === 'solid-primary' || design === 'solid-secondary' ? (
+            {design === 'solid-primary' || 'solid-secondary' ? (
                 <>
                     <span>{children}</span>
                     {design === 'solid-primary' &&

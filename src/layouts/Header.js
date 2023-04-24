@@ -4,7 +4,7 @@ import LinkElem from '../components/elements/Link';
 import Image from '../components/elements/Image';
 import Button from '../components/elements/Button';
 
-import HeaderItems from '../data/header.json';
+import HeaderItems from '../jsons/header.json';
 
 import Logo from '../assets/svg/logo.svg';
 import CartIcon from '../assets/svg/cart-icon.svg';
@@ -66,7 +66,7 @@ const Header = () => {
                         <ul className="nav__list">
                             {HeaderItems.headerLinks.map((item, index) =>
                                 <li className="nav__list--item" key={`header-link-${index}`}>
-                                    <LinkElem to={item.link} type="primary">
+                                    <LinkElem to={item.link} design="primary">
                                         {item.title}
                                     </LinkElem>
                                 </li>

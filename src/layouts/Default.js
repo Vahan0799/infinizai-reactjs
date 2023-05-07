@@ -1,4 +1,5 @@
 import React from 'react';
+import Lenis from '@studio-freight/lenis';
 
 import HeadMeta from '../components/HeadMeta';
 import Header from './Header';
@@ -11,6 +12,18 @@ const DefaultLayout = props => {
         image,
         children
     } = props;
+
+    const lenis = new Lenis({
+        duration: 1.5,
+        lerp: 0.9
+    })
+
+    const raf = (time) => {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
 
     return (
         <>

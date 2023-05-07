@@ -2,6 +2,7 @@ import React from 'react';
 import Esports from '../../../components/Esports';
 import LinkElem from '../../../components/elements/Link';
 import Image from '../../../components/elements/Image';
+import Observe from '../../../components/Observe';
 
 import newsData from '../../../jsons/blog-news.json'
 
@@ -16,7 +17,7 @@ const News = () => {
 					</div>
 					<LinkElem to="/blog" design="solid-primary">Read More</LinkElem>
 				</div>
-				<div className="news__articles">
+				<Observe className="news__articles">
 					{newsData.map((article, key) =>
 						<figure key={`article-${key}`} className="news__article">
 							<LinkElem to={article.url}>
@@ -29,7 +30,7 @@ const News = () => {
 							</figcaption>
 						</figure>
 					)}
-				</div>
+				</Observe>
 			</div>
 		</section>
 	)

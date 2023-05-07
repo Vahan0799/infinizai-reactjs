@@ -10,13 +10,13 @@ const News = () => {
 	return (
 		<section className="news__wrapper">
 			<div className="news__container">
-				<div className="news__head">
+				<Observe className="news__head fade-reveal">
 					<div>
 						<Esports/>
 						<h2>LATEST NEWS & ARTICLES</h2>
 					</div>
 					<LinkElem to="/blog" design="solid-primary">Read More</LinkElem>
-				</div>
+				</Observe>
 				<Observe className="news__articles">
 					{newsData.map((article, key) =>
 						<figure key={`article-${key}`} className="news__article">

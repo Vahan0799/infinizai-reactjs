@@ -11,6 +11,22 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.fade-reveal {
+    @for $i from 1 through 4 {
+        & > *:nth-child(#{$i}) {
+            transition: opacity 1s ease #{$i * 0.2s};
+        }
+    }
+
+    &:not(.in-view) > * {
+        opacity: 0;
+    }
+
+    &.in-view > * {
+        opacity: 1;
+    }
+}
+
 .container {
     @include media-breakpoint-up(lg) {
         margin: 0 auto;

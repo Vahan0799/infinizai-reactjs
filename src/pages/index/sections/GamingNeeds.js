@@ -9,10 +9,12 @@ const GamingNeeds = () => {
 	return (
 		<section className="gaming-needs">
 			<div className="gaming-needs__container container">
-				<Esports/>
-				<h3 className="h2">Your One Stop Shop Gaming Needs!</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-					totam rem aperiam</p>
+				<Observe className="gaming-needs__head fade-reveal">
+					<Esports/>
+					<h3 className="h2">Your One Stop Shop Gaming Needs!</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+						totam rem aperiam</p>
+				</Observe>
 				<div className="gaming-needs__grid">
 					{GamingNeedsData.map((item, index) =>
 						<Observe key={`needs-item-${index}`} className="gaming-needs__grid--item">

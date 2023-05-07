@@ -35,10 +35,10 @@
 
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) {
-                transition: clip-path .9s ease calc(#{$i} * 0.3s);
+                transition: clip-path .9s ease #{$i * 0.3s};
 
                 figure {
-                    transition: transform .9s ease calc(#{$i} * 0.3s);
+                    transition: transform .9s ease #{$i * 0.3s};
                 }
             }
         }

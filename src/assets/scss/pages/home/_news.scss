@@ -89,6 +89,10 @@
                 @include media-breakpoint-up(lg) {
                     grid-area: article-#{$i};
                 }
+
+                figcaption > p {
+                    animation: flicker #{$i * 0.8s} infinite alternate;
+                }
             }
         }
 
@@ -128,7 +132,7 @@
                 transform: translate(-50%, -50%) scale(0.7) rotate(45deg);
                 text-align: center;
                 letter-spacing: 0;
-                -webkit-box-reflect: below -4px linear-gradient(transparent, $black);
+                -webkit-box-reflect: below -4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(17%, transparent), to(rgba($white, 0.33)));
                 z-index: 2;
             }
 
@@ -168,9 +172,6 @@
             & > p {
                 color: $primary;
                 margin-bottom: 10px;
-                text-shadow: 0 0 10px $primary,
-                0 0 20px $primary,
-                0 0 40px $primary, 0 0 80px $primary, 0 0 120px $primary;
 
                 @include media-breakpoint-up(lg) {
                     margin-bottom: 20px;
@@ -185,5 +186,18 @@
                 }
             }
         }
+    }
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 10px $primary,
+        0 0 20px $primary,
+        0 0 40px $primary, 0 0 80px $primary, 0 0 120px $primary;
+
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
     }
 }

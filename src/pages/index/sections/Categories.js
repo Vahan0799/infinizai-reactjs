@@ -15,7 +15,7 @@ const Categories = () => {
 								alt={item.caption}
 								className="object-cover"
 							/>
-							<figcaption className="categories__item--description">
+							<figcaption className="categories__item-description w-100 h-100">
 								<Image
 									src={require(`../../../assets/svg/${item.icon}.svg`)}
 									alt={item.caption + ' Icon'}

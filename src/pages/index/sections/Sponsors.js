@@ -16,7 +16,7 @@ const Sponsors = () => {
 			<Observe className="sponsors__list container">
 				{SponsorData.map((item, index) =>
 					<div key={`sponsor-${index}`}
-						 className="sponsors__list--item"
+						 className="sponsors__list-item w-100"
 					>
 						<Image
 							src={require(`../../../assets/svg/${item.logo}.svg`)}

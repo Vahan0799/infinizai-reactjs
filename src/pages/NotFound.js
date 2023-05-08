@@ -27,8 +27,8 @@ const NotFound = () => {
 
     return (
         <Empty title="NOT FOUND" description="The page you are trying to reach does not exist.">
-            <section className="not-found">
-                <div className="not-found__content">
+            <section className="not-found w-100">
+                <div className="not-found__content w-100 h-100">
                     <div className="not-found__image" ref={notFound}>
                         <Image
                             src={NotFoundImage}

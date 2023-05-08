@@ -45,10 +45,16 @@ body::-webkit-scrollbar {
     }
 }
 
-.object-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.object {
+    &-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &-contain {
+        object-fit: contain;
+    }
 }
 
 .w-100 {
@@ -83,7 +89,7 @@ body::-webkit-scrollbar {
     outline: none;
 }
 
-%textarea-reset{
+%textarea-reset {
     border: none;
     background-color: transparent;
     resize: none;

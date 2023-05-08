@@ -36,6 +36,8 @@
         }
 
         & > a {
+            transition: all .3s ease !important;
+
             @include media-breakpoint-up(lg) {
                 min-width: 150px;
             }
@@ -70,11 +72,13 @@
             property: transform, opacity;
             duration: .8s;
             timing-function: ease;
-        };
+        }
 
         @include media-breakpoint-up(lg) {
-            &:not(:first-child) img {
-                max-height: 13vw;
+            &:not(:first-child) {
+                img {
+                    max-height: 13vw;
+                }
 
                 figcaption a p {
                     max-width: 214px;
@@ -194,7 +198,6 @@
         text-shadow: 0 0 10px $primary,
         0 0 20px $primary,
         0 0 40px $primary, 0 0 80px $primary, 0 0 120px $primary;
-
     }
 
     20%, 24%, 55% {

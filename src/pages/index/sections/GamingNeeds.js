@@ -7,7 +7,7 @@ import needsIcon from '../../../assets/svg/dot-icon.svg';
 
 const GamingNeeds = () => {
 	return (
-		<section className="gaming-needs">
+		<section className="gaming-needs w-100">
 			<div className="gaming-needs__container container">
 				<Observe className="gaming-needs__head fade-reveal">
 					<Esports/>

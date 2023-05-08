@@ -39,7 +39,7 @@ const Characters = () => {
     return(
         <section className="characters">
             <div className="characters__container">
-                <Observe className="characters__single--wrapper">
+                <Observe className="characters__single-wrapper">
                     <div className="characters__single">
                         <Swiper
                             {...firstSlider}
@@ -47,15 +47,18 @@ const Characters = () => {
                         >
                             {characters.CharacterPortrait.map((elem, index) =>
                                 <SwiperSlide key={`portrait-${index}`}>
-                                    <div className="characters__single--img">
-                                        <Image src={require(`../../../assets/images/${elem.image}.png`)} alt={elem.alt} height={512} width={263}/>
+                                    <div className="characters__single-img">
+                                        <Image src={require(`../../../assets/images/${elem.image}.png`)} 
+                                               alt={elem.alt} height={512} width={263}
+                                               className="w-100 h-100 object-contain"
+                                        />
                                     </div>
                                 </SwiperSlide>
                             )}
                         </Swiper>
                     </div>
                 </Observe>
-                <Observe className="characters__description--wrapper">
+                <Observe className="characters__description-wrapper">
                     <div className="characters__description">
                         <Esports/>
                         <article>
@@ -68,8 +71,11 @@ const Characters = () => {
                         >
                             {characters.CharacterDescription.map((el, key) =>
                                 <SwiperSlide key={`description-${key}`}>
-                                    <div className="characters__description--item">
-                                        <Image src={require(`../../../assets/images/${el.image}.jpg`)} alt={el.alt}/>
+                                    <div className="characters__description-item">
+                                        <Image src={require(`../../../assets/images/${el.image}.jpg`)}
+                                               alt={el.alt}
+                                               className="object-cover"
+                                        />
                                     </div>
                                 </SwiperSlide>
                             )}

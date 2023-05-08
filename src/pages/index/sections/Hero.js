@@ -14,11 +14,11 @@ const Hero = () => {
     },[]);
 
     return(
-        <section className="hero">
+        <section className="hero w-100">
             <div className="hero__container">
                 <div className="hero__left">
-                    <aside className={`hero__social${loadSidebar ? ' in-view': ''}`}>
-                        <div className="hero__social--container">
+                    <aside className={`hero__social w-100 h-100${loadSidebar ? ' in-view': ''}`}>
+                        <div className="hero__social-container h-100">
                             <LinkElem to="#." design="secondary">Facebook</LinkElem>
                             <LinkElem to="#." design="secondary">Instagram</LinkElem>
                             <LinkElem to="#." design="secondary">Twitch</LinkElem>
@@ -28,19 +28,20 @@ const Hero = () => {
                         <Esports />
                         <h1>Unleash the Next <Underline color="yellow">Generation</Underline> of Gaming</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
-                        <div className="hero__description--buttons">
+                        <div className="hero__description-buttons">
                             <LinkElem to="#." design="solid-secondary" data-color="#57B8FF">Explore More</LinkElem>
                             <LinkElem to="#." design="primary">View our team</LinkElem>
                         </div>
                     </div>
                 </div>
                 <div className="hero__right">
-                    <Observe className="hero__img">
+                    <Observe className="hero__img w-100">
                         <Image
                             src={HeroImage}
                             width={660}
                             height={518}
                             alt={'hero-png'}
+                            className="w-100"
                         />
                     </Observe>
                 </div>

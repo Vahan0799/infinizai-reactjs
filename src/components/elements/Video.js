@@ -11,15 +11,15 @@ const Video = props => {
     } = props;
 
     const videoElement = useRef(null);
-    const [PlayVideo, setPlayVideo] = useState(false);
+    const [playState, setPlayState] = useState(false);
     const [progress, setProgress] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
-	const [mutedAudio, setMutedAudio] = useState(false);
+	const [mute, setMute] = useState(false);
 
     let interval;
 
     const playVideo = () => {
-        !PlayVideo ? setPlayVideo(videoElement?.current.play()) : setPlayVideo(videoElement?.current.pause());
+        !playState ? setPlayState(videoElement?.current.play()) : setPlayState(videoElement?.current.pause());
     };
 
     const updateVideoTime = () => {
@@ -45,18 +45,18 @@ const Video = props => {
 
     return (
         <div className="video-container">
-            <Button className={`video-playback${PlayVideo ? ' playing' : ''}`} onClick={playVideo}/>
+            <Button className={`video-playback${playState ? ' playing' : ''}`} onClick={playVideo}/>
             <video {...rest} playsInline ref={videoElement}
                 onClick={playVideo}
                 onTimeUpdate={updateVideoTime}
-				muted={mutedAudio}
+				muted={mute}
             >
                 {fallBackSrc && fallBackType &&
                     <source src={fallBackSrc} type={`video/${fallBackType}`}/>
                 }
                 <source src={src} type={`video/${type}`}/>
             </video>
-            {PlayVideo &&
+            {playState &&
                 <div className="video-controls">
                     <div className="video-duration">
                         <div className="progress">
@@ -78,7 +78,7 @@ const Video = props => {
                         </div>
                         <div className="video-expands">
                             <span className="fullscreen" onClick={() => videoElement.current.requestFullscreen()}/>
-                            <input type="checkbox" id="volume-toggle" onChange={() => setMutedAudio(!mutedAudio)}/>
+                            <input type="checkbox" id="volume-toggle" onChange={() => setMute(!mute)}/>
                             <label htmlFor="volume-toggle"/>
                         </div>
                     </div>

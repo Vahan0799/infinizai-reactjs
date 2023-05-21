@@ -1,58 +1,40 @@
-import React, {useState, useEffect} from 'react';
-
 const Input = props => {
-    const {
-        className,
-        labelClass,
-        inputClass,
-        id,
-        type,
-        placeholder,
-        value,
-        onChange,
-        autocomplete,
-        name,
-        ...rest
-    } = props;
+	const {
+		className,
+		id,
+		type,
+		label,
+		value,
+		onChange,
+		name,
+		...rest
+	} = props;
 
-    const [stateValue, setStateValue] = useState(value);
-
-    useEffect(() => {
-        if (onChange) {
-            onChange({ target: { name, value: stateValue } });
-        }
-    }, [stateValue]);
-
-    useEffect(() => {
-        if (stateValue !== value) {
-            setStateValue(value);
-        }
-    }, [value]);
-
-    const changeHandler = (e) =>{
-        setStateValue(e.target.value);
-    };
-
-    return(
-        <div className={`input--wrapper${className}`}>
-            <input
-                id={id}
-                type={type}
-                className={inputClass ? inputClass : ''}
-                placeholder={' '}
-                name={name}
-                onChange={changeHandler}
-                autoComplete={autocomplete}
-                {...rest}
-            />
-            <label
-                htmlFor={id}
-                className={labelClass ? labelClass : ''}
-            >
-                {placeholder}
-            </label>
-        </div>
-    );
+	return (
+		<div className={`input__wrapper${className ? className : ''}`}>
+			{type === 'textarea' ? (
+				<textarea id={id}
+						  placeholder=" "
+						  name={name}
+						  onChange={onChange}
+						  {...rest}
+				>
+                </textarea>
+			) : (
+				<input
+					id={id}
+					type={type}
+					placeholder=" "
+					name={name}
+					onChange={onChange}
+					{...rest}
+				/>
+			)}
+			<label htmlFor={id}>
+				{label}
+			</label>
+		</div>
+	)
 };
 
 export default Input;

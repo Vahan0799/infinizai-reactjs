@@ -7,6 +7,7 @@ import CloudGaming from './sections/CloudGaming';
 import Characters from './sections/Characters';
 import Categories from './sections/Categories';
 import News from './sections/News';
+import Join from './sections/Join';
 
 const Index = () => {
     return (
@@ -18,6 +19,7 @@ const Index = () => {
             <Characters/>
             <Categories/>
             <News/>
+            <Join/>
         </DefaultLayout>
     );
 };

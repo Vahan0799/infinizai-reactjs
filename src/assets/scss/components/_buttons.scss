@@ -4,6 +4,7 @@
         weight: 400;
         size: 14px;
     }
+
     @extend %full-center;
     transition: all .4s ease;
 
@@ -172,6 +173,21 @@
         background-color: transparent;
         padding: 0;
         border: none;
+    }
+
+    &-submit {
+        color: $white;
+        background-color: $primary;
+        border: none;
+        padding: 15px;
+        min-width: 150px;
+        border-radius: 5px;
+
+        &:hover {
+            color: $primary;
+            background-color: $secondary;
+            border-radius: 10px;
+        }
     }
 }
 

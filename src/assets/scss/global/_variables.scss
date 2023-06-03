@@ -6,6 +6,7 @@ $media-break-points: (
 	lg: 992px,
 	xl: 1280px,
 	xxl: 1440px,
+	xxxl: 1920px
 ) !default;
 
 $white: #fff !default;
@@ -16,10 +17,12 @@ $yellow-400: 	#FDD04A 	!default;
 
 // blue
 $blue-500: 		#57B8FF 	!default;
+$blue-700:   	#222730 	!default;
 $blue-800: 		#2A313C 	!default;
 $blue-900: 		#141821 	!default;
 
 // gray
+$gray-100:		#898989   	!default;
 $gray-300: 		#999999 	!default;
 $gray-700:  	#3B3D46 	!default;
 $gray-800: 		#383D45 	!default;

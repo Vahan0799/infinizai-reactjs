@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Menu Items",
+    "links": [
+      {
+        "title": "About",
+        "url": "/about"
+      },
+      {
+        "title": "Blog",
+        "url": "/blog"
+      },
+      {
+        "title": "Shop",
+        "url": "/shop"
+      },
+      {
+        "title": "Contact Us",
+        "url": "/contact"
+      }
+    ]
+  },
+  {
+    "title": "Other Pages",
+    "links": [
+      {
+        "title": "Styleguide",
+        "url": "/styleguide"
+      },
+      {
+        "title": "Changelog",
+        "url": "/changelog"
+      },
+      {
+        "title": "Team",
+        "url": "/team"
+      },
+      {
+        "title": "Licenses",
+        "url": "/licenses"
+      }
+    ]
+  },
+  {
+    "title": "Social Media",
+    "links": [
+      {
+        "icon": "instagram",
+        "url": "#."
+      },
+      {
+        "icon": "facebook",
+        "url": "#."
+      },
+      {
+        "icon": "twitter",
+        "url": "#."
+      }
+    ]
+  }
+]

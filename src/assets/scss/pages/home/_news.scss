@@ -48,6 +48,13 @@
         display: grid;
         grid-gap: 24px;
 
+        @include media-breakpoint-only(md) {
+            grid-gap: 45px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 'article-1 article-1'
+            'article-2 article-3' 'article-4 article-5';
+        }
+
         @include media-breakpoint-up(lg) {
             align-items: start;
             grid-template-columns: 50% 22%;
@@ -90,7 +97,7 @@
             &:nth-child(#{$i}) {
                 transition-delay: #{$i * 0.2}s;
 
-                @include media-breakpoint-up(lg) {
+                @include media-breakpoint-up(md) {
                     grid-area: article-#{$i};
                 }
 

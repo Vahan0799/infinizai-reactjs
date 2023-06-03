@@ -1,0 +1,170 @@
+.footer {
+    background-color: $blue-700;
+    padding: 40px 20px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 120px 8px 60px;
+    }
+
+    &__container > p {
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.6px;
+    }
+
+    &__content {
+        display: flex;
+        border-bottom: 1px solid $gray-100;
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+
+        p, li {
+            @include media-breakpoint-up(lg) {
+                font-size: 15px;
+            }
+        }
+
+        & > div {
+            &:not(.footer__links) {
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 30px;
+                }
+
+                @include media-breakpoint-only(md) {
+                    max-width: 33%;
+                    margin-right: 19px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    max-width: 375px;
+                    margin-right: 80px;
+                }
+            }
+
+            a {
+                width: fit-content;
+                justify-content: flex-start;
+            }
+
+            p {
+                margin-top: 25px;
+
+                @include media-breakpoint-down(md) {
+                    line-height: 23px;
+                }
+            }
+        }
+    }
+
+    &__links {
+        display: grid;
+
+        @include media-breakpoint-down(md) {
+            grid-template-areas: 'list-1 list-2' 'list-3 list-3';
+            grid-gap: 25px;
+
+            @for $x from 1 through 3 {
+                & > *:nth-child(#{$x}) {
+                    grid-area: list-#{$x};
+                }
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__list {
+        padding-top: 10px;
+
+        &:not(:last-child) a {
+            @extend .link;
+            @extend .link-primary;
+        }
+
+        &:last-child {
+            display: grid;
+            align-items: start;
+            grid-column-gap: 25px;
+            grid-template-areas: 'link-1 link-1 link-1' 'link-2 link-3 link-4';
+            grid-template-columns: repeat(3, max-content);
+            width: fit-content;
+            height: fit-content;
+
+            @for $i from 1 through 4 {
+                & > *:nth-child(#{$i}) {
+                    grid-area: link-#{$i};
+                }
+            }
+
+            li:not(:first-child) {
+                margin-bottom: 0;
+            }
+
+            a {
+                position: relative;
+                z-index: 1;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::before {
+                    content: '';
+                    padding: 5px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $tertiary;
+                    position: absolute;
+                    left: -5px;
+                    top: -4px;
+                    z-index: -1;
+                    transition: .3s ease;
+                }
+
+                &:hover {
+                    &::before {
+                        border-radius: 10px;
+                        transform: rotate(45deg);
+                        box-shadow: inset 1px -3px 11px -1px rgba(0,0,0,0.57);
+                    }
+
+                    img {
+                        transform: scale(0.7);
+                    }
+                }
+            }
+        }
+
+        a {
+            font-size: inherit !important;
+            justify-content: flex-start;
+
+            &:not(:hover) {
+                color: currentColor !important;
+            }
+        }
+
+        &-title {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+
+        &-item {
+            width: fit-content;
+            color: $gray-300;
+            font-size: 15px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

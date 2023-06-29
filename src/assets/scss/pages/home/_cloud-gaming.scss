@@ -3,14 +3,15 @@
 
     &__container {
         display: grid;
-        padding: 50px 25px;
 
         @include media-breakpoint-down(lg) {
+            padding: 50px 25px;
             grid-gap: 55px;
         }
 
         @include media-breakpoint-up(lg) {
-            padding: 120px 0;
+            padding-top: 120px;
+            padding-bottom: 120px;
             grid-template-columns: repeat(2, 1fr);
         }
 

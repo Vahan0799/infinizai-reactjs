@@ -37,10 +37,10 @@
         @include media-breakpoint-down(lg) {
             max-width: 80%;
             margin: 0 auto;
+        }
 
-            img {
-                object-fit: contain;
-            }
+        img {
+            object-fit: contain;
         }
     }
 

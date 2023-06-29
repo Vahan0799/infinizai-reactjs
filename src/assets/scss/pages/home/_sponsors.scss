@@ -1,10 +1,11 @@
 .sponsors {
     $sponsor: #{&};
-    padding: 50px 15px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: $secondary;
 
-    @include media-breakpoint-up(lg) {
-        padding: 120px 20px;
+    @include media-breakpoint-down(lg) {
+        padding: 50px 15px;
     }
 
     &__description {

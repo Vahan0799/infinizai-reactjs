@@ -4,10 +4,11 @@
     }
 
     &__container {
-        padding: 50px 20px;
+        padding-top: 130px;
+        padding-bottom: 130px;
 
-        @include media-breakpoint-up(lg) {
-            padding: 130px 60px;
+        @include media-breakpoint-down(lg) {
+            padding: 50px 20px;
         }
     }
 

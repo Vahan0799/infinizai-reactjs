@@ -9,7 +9,7 @@ import newsData from '../../../jsons/blog-news.json'
 const News = () => {
 	return (
 		<section className="news__wrapper">
-			<div className="news__container">
+			<div className="news__container container">
 				<Observe className="news__head fade-reveal">
 					<div>
 						<Esports/>

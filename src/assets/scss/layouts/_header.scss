@@ -136,6 +136,20 @@
         @include media-breakpoint-up(lg) {
             justify-self: end;
         }
+
+        .cart-trigger {
+            position: relative;
+
+            .quantity {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 10px;
+                background-color: $white;
+                border-radius: 15px;
+                padding: 4px 8px;
+            }
+        }
     }
 
     &__mobile {

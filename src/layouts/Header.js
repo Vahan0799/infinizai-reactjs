@@ -74,13 +74,14 @@ const Header = () => {
                         </ul>
 
                         <div className="nav__info">
-                            <Button design="reset">
+                            <Button design="reset" className="cart-trigger">
                                 <Image
                                     src={CartIcon}
                                     width={53}
                                     height={40}
-                                    alt={'cart-icon'}
+                                    alt="cart-icon"
                                 />
+                                <span className="quantity">0</span>
                             </Button>
                             <Button design="solid-primary" color="#FDD04A">Contact Us</Button>
                         </div>

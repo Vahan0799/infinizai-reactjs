@@ -16,14 +16,14 @@ const DefaultLayout = props => {
     const lenis = new Lenis({
         duration: 1.5,
         lerp: 0.9
-    })
+    });
 
     const raf = (time) => {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    };
 
-    requestAnimationFrame(raf)
+    requestAnimationFrame(raf);
 
     return (
         <>

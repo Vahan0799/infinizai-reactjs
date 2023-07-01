@@ -1,6 +1,7 @@
 # Getting Started with Infinizai
 <p align="left">
-    <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150">
+    <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150"> <br/>
+    <img src="./src/assets/images/hero.png" alt="Build Status">
 </p>
 
 ## Available Scripts

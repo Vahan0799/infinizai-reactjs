@@ -1,7 +1,10 @@
 # Getting Started with Infinizai
 <p align="left">
     <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150"> <br/>
-    <img src="./src/assets/images/hero.png" alt="Build Status">
+    <a href="https://infinizai-reactjs.vercel.app/" target="_blank">
+        <img src="./src/assets/images/hero.png" alt="Hoer Preview">
+    </a>
+
 </p>
 
 ## Available Scripts

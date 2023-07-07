@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {toggleNav, atTop, stickHeader} from '../store/slices/HeaderSlice';
 
 import LinkElem from '../components/elements/Link';
 import Image from '../components/elements/Image';
@@ -10,26 +12,23 @@ import Logo from '../assets/svg/logo.svg';
 import CartIcon from '../assets/svg/cart-icon.svg';
 
 const Header = () => {
-    const [navOpen, setNavOpen] = useState(false);
     const [position, setPosition] = useState(window.scrollY);
-    const [headerSticky, setHeaderSticky] = useState(false);
-    const [atTop, setAtTop] = useState(true);
+    const dispatch = useDispatch();
 
-    const toggleNav = () => {
-        setNavOpen(!navOpen);
-    };
+    const isNavOpen = useSelector(state => state.header.isNavOpen);
+    const isAtTop = useSelector(state => state.header.isAtTop);
+    const isSticky = useSelector(state => state.header.isHeaderSticky);
 
     const stickyHeader = () => {
         let moving = window.scrollY;
 
-        if (window.scrollY > 5 && !navOpen) {
-            setHeaderSticky(position > moving);
+        if (window.scrollY > 5 && !isNavOpen) {
+            dispatch(stickHeader(position > moving));
             setPosition(moving);
-            setAtTop(false);
-
-        } else if (window.scrollY <= 5 && !navOpen) {
-            setAtTop(true);
-            setHeaderSticky(false);
+            dispatch(atTop(false));
+        } else if (window.scrollY <= 5 && !isNavOpen) {
+            dispatch(atTop(true));
+            dispatch(stickHeader(false));
         }
     };
 
@@ -42,8 +41,8 @@ const Header = () => {
     });
 
     return (
-        <header className={`header${headerSticky ? ' header__sticky' : ''}${atTop ? ' header__visible' : ''}`}>
-            <div className={`header__inner${navOpen ? ' header__open' : ''}`}>
+        <header className={`header${isSticky ? ' header__sticky' : ''}${isAtTop ? ' header__visible' : ''}`}>
+            <div className={`header__inner${isNavOpen ? ' header__open' : ''}`}>
                 <div className="header__inner--main">
                     <LinkElem to="/">
                         <Image
@@ -54,7 +53,7 @@ const Header = () => {
                         />
                     </LinkElem>
 
-                    <Button onClick={toggleNav} design="reset" className="nav__mobile">
+                    <Button onClick={() => {dispatch(toggleNav())}} design="reset" className="nav__mobile">
                         <i></i>
                         <i></i>
                         <i></i>

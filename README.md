@@ -2,14 +2,15 @@
 <p align="left">
     <img src="./src/assets/svg/logo.svg" alt="Build Status" width="150"> <br/>
     <a href="https://infinizai-reactjs.vercel.app/" target="_blank">
-        <img src="./src/assets/images/hero.png" alt="Hoer Preview">
+        <img src="./src/assets/preview/hero.png" alt="Hoer Preview">
     </a>
 </p>
 
 ## ***Build With***
 <p align="left">
-    <img src="./src/assets/svg/react-icon.svg" alt="React" width="100"> &emsp; &emsp;
-    <img src="./src/assets/svg/sass-icon.svg" alt="SASS" width="150">
+    <img src="./src/assets/preview/react-icon.svg" alt="React" width="100"> &emsp; &emsp;
+    <img src="./src/assets/preview/sass-icon.svg" alt="SASS" width="150"> &emsp; &emsp;
+    <img src="./src/assets/preview/redux-icon.svg" alt="Redux" width="120">
 </p>
 
 ## Available Scripts

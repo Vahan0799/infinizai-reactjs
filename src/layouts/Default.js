@@ -2,8 +2,8 @@ import React from 'react';
 import Lenis from '@studio-freight/lenis';
 
 import HeadMeta from '../components/HeadMeta';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const DefaultLayout = props => {
     const {

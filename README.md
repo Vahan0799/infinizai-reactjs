@@ -6,7 +6,7 @@
     </a>
 </p>
 
-## ***Build With***
+## ***Built With***
 <p align="left">
     <img src="./src/assets/preview/react-icon.svg" alt="React" width="100"> &emsp; &emsp;
     <img src="./src/assets/preview/sass-icon.svg" alt="SASS" width="150"> &emsp; &emsp;
